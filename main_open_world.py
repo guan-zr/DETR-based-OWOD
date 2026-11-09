@@ -163,6 +163,8 @@ def get_args_parser():
     return parser
 
 def main(args):
+    # The upstream assignment to wandb=None otherwise shadows the imported module.
+    global wandb
     if len(args.wandb_project)>0:
         if len(args.wandb_name)>0:
             wandb.init(project=args.wandb_project, entity="marvl", group=args.wandb_name)
@@ -278,6 +280,8 @@ def main(args):
         args.start_epoch = checkpoint['epoch'] + 1
         if args.eval:
             test_stats, coco_evaluator = evaluate(model, criterion, postprocessors, data_loader_val, base_ds, device, args.output_dir, args)
+            if args.output_dir:
+                (output_dir / 'official_metrics.json').write_text(json.dumps(test_stats['metrics'], indent=2))
             return
           
     if args.resume:
@@ -401,10 +405,8 @@ def get_datasets(args):
 
     train_set = args.train_set
     test_set = args.test_set
-    file='/g/data/cp23/datasets/fcoco/coco_all_q95.hdf5'
-    fo= h5py.File(file,"r")
-    dataset_train = OWDetection(args, args.data_root, image_set=args.train_set, transforms=make_coco_transforms(args.train_set), dataset = args.dataset,fo=fo)
-    dataset_val = OWDetection(args, args.data_root, image_set=args.test_set, dataset = args.dataset, transforms=make_coco_transforms(args.test_set),fo=fo)
+    dataset_train = OWDetection(args, args.data_root, image_set=args.train_set, transforms=make_coco_transforms(args.train_set), dataset=args.dataset)
+    dataset_val = OWDetection(args, args.data_root, image_set=args.test_set, dataset=args.dataset, transforms=make_coco_transforms(args.test_set))
 
     print(args.train_set)
     print(args.test_set)

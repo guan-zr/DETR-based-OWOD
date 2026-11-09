@@ -109,7 +109,7 @@ def evaluate(model, criterion, postprocessors, data_loader, base_ds, device, out
     metric_logger = utils.MetricLogger(delimiter="  ")
     header = 'Test:'
     iou_types = tuple(k for k in ('segm', 'bbox') if k in postprocessors.keys())
-    coco_evaluator = OWEvaluator(base_ds, iou_types, coco=data_loader.dataset.coco,args=args)
+    coco_evaluator = OWEvaluator(base_ds, iou_types, args=args)
  
     panoptic_evaluator = None
     if 'panoptic' in postprocessors.keys():
@@ -120,8 +120,6 @@ def evaluate(model, criterion, postprocessors, data_loader, base_ds, device, out
         )
     count=0
     for samples, targets in metric_logger.log_every(data_loader, 10, header):
-        if count==100:
-            break
         samples = samples.to(device)
         targets = [{k: v.to(device) for k, v in t.items()} for t in targets]
         outputs = model(samples)

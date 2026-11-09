@@ -1,0 +1,11 @@
+# Torch/cu118 and NumPy are inherited from the isolated offline Conda clone.
+pycocotools==2.0.7
+scipy==1.11.4
+h5py==3.10.0
+wandb==0.13.4
+einops==0.5.0
+joblib==1.2.0
+pandas==1.5.1
+seaborn==0.12.1
+ipdb==0.13.9
+ninja==1.11.1.1

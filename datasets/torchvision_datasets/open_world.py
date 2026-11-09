@@ -145,16 +145,9 @@ class OWDetection(VisionDataset):
         annotation_dir = os.path.join(self.root, 'Annotations')
         image_dir = os.path.join(self.root, 'JPEGImages')
 
-        if "test" in image_set:
-            self.coco = COCO('/g/data/cp23/datasets/coco/annotations/instances_val2017.json')
-        else:
-            self.coco = COCO('/g/data/cp23/datasets/coco/annotations/instances_train2017.json')  
-        tag="val2017" if "test" in image_set else "train2017"
-        for floder_name in fo.keys():
-            if floder_name==tag: #"trainval", "train2017" 
-                self.hdf5=fo[floder_name]
-                break
-        splits_dir = "data/OWDETR/coco/ImageSets"
+        # Restore PROB's documented VOC XML/JPEG backend. It supports the VOC
+        # images in M-OWODB and does not require the author's private HDF5 file.
+        splits_dir = os.path.join(self.root, 'ImageSets', self.dataset)
         file_names = self.extract_fns(image_set, splits_dir)
         if image_set == 'voc2007_trainval':
             print('PASCAL-VOC2007 dataset used; clearing images with missing object classes')
@@ -214,9 +207,8 @@ class OWDetection(VisionDataset):
 
     @functools.lru_cache(maxsize=None)
     def load_instances(self, img_id):
-        # tree = ET.parse(self.imgid2annotations[img_id])
-        # target = self.parse_voc_xml(tree.getroot())
-        target=self.coco_annotation(os.path.basename(self.imgid2annotations[img_id]).split('.')[0])
+        tree = ET.parse(self.imgid2annotations[img_id])
+        target = self.parse_voc_xml(tree.getroot())
         image_id = target['annotation']['filename']
         instances = []
         for obj in target['annotation']['object']:
@@ -272,7 +264,7 @@ class OWDetection(VisionDataset):
         curr_intro_cls = self.args.CUR_INTRODUCED_CLS
         total_num_class = self.args.num_classes #81
         known_classes = range(0, prev_intro_cls+curr_intro_cls)
-        entry = copy.copy(target)
+        entry = copy.deepcopy(target)
         for annotation in  copy.copy(entry):
         # for annotation in entry:
             if annotation["category_id"] not in known_classes:
@@ -309,9 +301,7 @@ class OWDetection(VisionDataset):
         """
 
         image_set = self.transforms[0]
-        file_name=self.image_set[index]#os.path.basename(self.images[index]).split(".")[0]
-        jpeg = self.hdf5[file_name][:]
-        img = Image.open(BytesIO(jpeg)).convert('RGB')
+        img = Image.open(self.images[index]).convert('RGB')
         # img.save("img.png")
         # img = Image.open(self.images[index]).convert('RGB')
         target, instances = self.load_instances(self.imgids[index])
