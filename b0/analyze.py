@@ -4,6 +4,7 @@ from collections import Counter, defaultdict
 import csv
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 import time
 import xml.etree.ElementTree as ET
@@ -18,7 +19,7 @@ from torch.utils.data import DataLoader
 from b0.common import (ARTIFACTS, build, clone_outputs, datasets, json_write,
                        load_checkpoint, model_args, seed_all, to_device)
 from b0.features import FeatureCapture
-from b0.metrics import iou, official_unknown_hits, query_groups
+from b0.metrics import iou, official_unknown_hits, query_groups, miss_score_summary
 from b0.prepare_data import ALIASES
 from b0.smoke import equal, subset
 from datasets.open_world_eval import OWEvaluator
@@ -186,6 +187,7 @@ def run(checkpoint,config=None,smoke_limit=0,output=None):
                 assert coverage[name][rank]['100'][threshold]==coverage[name]['all'][threshold]
     miss=Counter(r['miss_type'] for r in unknown);missed=len(unknown)-len(hits)
     summary={'scope':'smoke_only' if smoke_limit else 'full_task1','checkpoint':provenance,
+        'analysis_git_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
         'test_rows':len(dataset),'unique_images':len(seen),'unknown_gt_unique_non_difficult':len(unknown),
         'known_gt_unique_non_difficult':len(known),'unknown_gt_official_row_denominator':int(evaluator.num_unks[50][0]),
         'coverage':coverage,'official_metrics':official,'query_group_counts':dict(group_counts),
@@ -195,6 +197,8 @@ def run(checkpoint,config=None,smoke_limit=0,output=None):
             'B_fraction_all_unknown':miss['B_no_candidate']/len(unknown),
             'A_fraction_missed_unknown':miss['A_candidate_but_not_detected']/max(missed,1),
             'B_fraction_missed_unknown':miss['B_no_candidate']/max(missed,1)},
+        'miss_type_best_localizing_query_scores':miss_score_summary(records),
+        'WI_at_recall_levels':evaluator.compute_WI_at_many_recall_level(evaluator.all_recs,evaluator.tp_plus_fp_cs,evaluator.fp_os),
         'feature_shapes':feature_shapes,'feature_hooks_bitwise_equal':True,'seconds':time.time()-started,
         'coordinate_convention':'continuous XYXY in original image pixels; GT xmin/ymin minus 1, xmax/ymax unchanged (PROB loader)',
         'grouping':'nearest of all annotated GT; >=0.5 and non-difficult -> known/unknown; max<0.1 -> background; otherwise ambiguous. Ties XML order.',

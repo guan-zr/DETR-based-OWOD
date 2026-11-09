@@ -25,6 +25,10 @@ def main():
     stress=read('reports/memory_stress.json')
     final=read('query_analysis/final/summary.json')
     status=read('reports/train_status.json',{})
+    failure=ARTIFACTS/'reports/pipeline_failure.txt'
+    status_file=ARTIFACTS/'reports/train_status.json'
+    if failure.exists() and (not status_file.exists() or failure.stat().st_mtime>status_file.stat().st_mtime):
+        status=dict(status,state='pipeline_failed',failure=failure.read_text().strip())
     source=read('reports/source_verification.json',{})
     env=read('reports/environment.json',{})
     config=json.loads((REPO/'b0/config.json').read_text())
@@ -176,6 +180,8 @@ A/B统计（分母需区分）：
 ```
 
 物体性分布的均值/分位数：summary.json/objectness_distributions；互斥Query组数：{final['query_group_counts']}。图像在 query_analysis/final/figures/ 中。
+
+按 detected/A/B 分组的最佳定位Query的latent及unknown分类分数均值、中位数与分位数，见 summary.json/miss_type_best_localizing_query_scores。这是描述性关联，不作为“低分导致漏检”的因果证明。全部recall级别WI见 WI_at_recall_levels。
 
 ## 依据实验的后续判断
 

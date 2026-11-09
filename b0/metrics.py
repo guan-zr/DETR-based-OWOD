@@ -57,3 +57,17 @@ def official_unknown_hits(lines, gt_by_image):
         if overlaps.max()>0.5 and not gt['difficult'][nearest]:
             hits.add((stem,nearest))
     return hits
+
+
+def miss_score_summary(records):
+    """Descriptive scores for the best-localizing query, without causal claims."""
+    result={}
+    for kind in ['detected','A_candidate_but_not_detected','B_no_candidate']:
+        rows=[r for r in records if r['group']=='unknown' and r['miss_type']==kind]
+        result[kind]={'count':len(rows)}
+        for key in ['best_iou_latent','best_iou_classifier_unknown']:
+            values=np.array([r[key] for r in rows])
+            result[kind][key]={'mean':float(values.mean()) if len(values) else None,
+                              'median':float(np.median(values)) if len(values) else None,
+                              'quantiles_05_25_75_95':np.quantile(values,[.05,.25,.75,.95]).tolist() if len(values) else []}
+    return result
