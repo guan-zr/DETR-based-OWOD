@@ -130,7 +130,7 @@ python -m b0.train --resume {ARTIFACTS}/checkpoints/task1/checkpoint.pth
 bash b0/eval_task1.sh                       # 官方全量评估入口
 python -m b0.analyze --checkpoint {ARTIFACTS}/checkpoints/task1/checkpoint0040.pth
 python -m b0.write_reports
-bash b0/launch.sh                          # nohup串联训练→评估→分析→报告，锁防重复启动
+bash b0/launch.sh                          # setsid后台串联训练→评估→分析→报告，锁防重复启动
 ```
 
 训练在单GPU通过官方模型/criterion与相同AdamW参数组执行，外部训练器增加梯度累积、原子Checkpoint、RNG状态、内存及耗时记录；中断优先恢复有效rolling权重。中途恢复的worker增强随机流不保证与不中断执行逐位相同。训练/评估失败由pipeline保留日志和错误状态。

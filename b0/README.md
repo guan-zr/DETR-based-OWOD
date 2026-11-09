@@ -19,7 +19,7 @@ accumulation 10, effective batch 20. Batch 5 failed the worst-padding memory
 test. The official M protocol is **TOWOD, 20 VOC known classes**, not the
 19-class OWDETR recipe in the mislabeled upstream training script.
 
-The pipeline resumes its own rolling checkpoint, evaluates through the official
+The pipeline runs in a detached Linux session (`setsid`), resumes its own rolling checkpoint, evaluates through the official
 entrypoint, then runs streaming query analysis and updates the reports. A lock
 prevents concurrent training pipelines. Logs remain in `logs/`. Rolling state is
 saved every 100 optimizer updates and at epoch boundaries; final and pre-LR-drop
