@@ -1,0 +1,16 @@
+{
+  "python": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+  "python_executable": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/env/bin/python",
+  "torch": "2.1.2+cu118",
+  "torchvision": "0.16.2+cu118",
+  "torch_cuda": "11.8",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "compute_capability": [
+    8,
+    9
+  ],
+  "platform": "Linux-5.15.0-97-generic-x86_64-with-glibc2.35",
+  "hostname": "autodl-container-1cf345b42f-f9b87ef0",
+  "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2022 NVIDIA Corporation\nBuilt on Wed_Sep_21_10:33:58_PDT_2022\nCuda compilation tools, release 11.8, V11.8.89\nBuild cuda_11.8.r11.8/compiler.31833905_0\n",
+  "gcc": "gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0"
+}

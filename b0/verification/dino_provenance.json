@@ -1,0 +1,7 @@
+{
+  "url": "https://dl.fbaipublicfiles.com/dino/dino_resnet50_pretrain/dino_resnet50_pretrain.pth",
+  "sha256": "156f8c4166a23dc2951ae811e39d76a06269c565932edf647c0187e65cd7aa7c",
+  "size": 94345885,
+  "keys": 318,
+  "validated": "torch.load and ResNet50 conv1 shape; official self-supervised backbone"
+}

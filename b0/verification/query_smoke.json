@@ -1,0 +1,375 @@
+{
+  "scope": "smoke_only",
+  "checkpoint": {
+    "checkpoint": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/checkpoints/smoke_b2_a10/checkpoint.pth",
+    "epoch": 0,
+    "sha256": "99c5c84ff838f8686a2068eb3a02527136482180dd347becf21f24543cdc34fc",
+    "training_git_commit": "ca911786051508f41ed59f6873385267af43acb7"
+  },
+  "test_rows": 32,
+  "unique_images": 32,
+  "unknown_gt_unique_non_difficult": 115,
+  "known_gt_unique_non_difficult": 137,
+  "unknown_gt_official_row_denominator": 115,
+  "coverage": {
+    "known": {
+      "all": {
+        "0.3": 0.2116788321167883,
+        "0.5": 0.014598540145985401,
+        "0.7": 0.0
+      },
+      "latent": {
+        "10": {
+          "0.3": 0.06569343065693431,
+          "0.5": 0.0,
+          "0.7": 0.0
+        },
+        "50": {
+          "0.3": 0.13138686131386862,
+          "0.5": 0.0072992700729927005,
+          "0.7": 0.0
+        },
+        "100": {
+          "0.3": 0.2116788321167883,
+          "0.5": 0.014598540145985401,
+          "0.7": 0.0
+        }
+      },
+      "classifier_unknown": {
+        "10": {
+          "0.3": 0.029197080291970802,
+          "0.5": 0.0,
+          "0.7": 0.0
+        },
+        "50": {
+          "0.3": 0.13138686131386862,
+          "0.5": 0.0072992700729927005,
+          "0.7": 0.0
+        },
+        "100": {
+          "0.3": 0.2116788321167883,
+          "0.5": 0.014598540145985401,
+          "0.7": 0.0
+        }
+      }
+    },
+    "unknown": {
+      "all": {
+        "0.3": 0.09565217391304348,
+        "0.5": 0.008695652173913044,
+        "0.7": 0.0
+      },
+      "latent": {
+        "10": {
+          "0.3": 0.017391304347826087,
+          "0.5": 0.0,
+          "0.7": 0.0
+        },
+        "50": {
+          "0.3": 0.06086956521739131,
+          "0.5": 0.008695652173913044,
+          "0.7": 0.0
+        },
+        "100": {
+          "0.3": 0.09565217391304348,
+          "0.5": 0.008695652173913044,
+          "0.7": 0.0
+        }
+      },
+      "classifier_unknown": {
+        "10": {
+          "0.3": 0.008695652173913044,
+          "0.5": 0.0,
+          "0.7": 0.0
+        },
+        "50": {
+          "0.3": 0.034782608695652174,
+          "0.5": 0.0,
+          "0.7": 0.0
+        },
+        "100": {
+          "0.3": 0.09565217391304348,
+          "0.5": 0.008695652173913044,
+          "0.7": 0.0
+        }
+      }
+    }
+  },
+  "official_metrics": {
+    "WI": 0,
+    "AOSA": 0.0,
+    "CK_AP50": 0.0,
+    "CK_P50": 0.0,
+    "CK_R50": 0.0,
+    "K_AP50": 0.0,
+    "K_P50": 0.0,
+    "K_R50": 0.0,
+    "U_AP50": 0.005573824979364872,
+    "U_P50": 0.03125,
+    "U_R50": 0.8695652173913043
+  },
+  "query_group_counts": {
+    "background": 2671,
+    "ambiguous": 526,
+    "known": 2,
+    "unknown": 1
+  },
+  "unknown_misses": {
+    "counts": {
+      "B_no_candidate": 114,
+      "detected": 1
+    },
+    "missed_unique_gt": 114,
+    "official_hit_unique_fraction": 0.008695652173913044,
+    "A_fraction_all_unknown": 0.0,
+    "B_fraction_all_unknown": 0.991304347826087,
+    "A_fraction_missed_unknown": 0.0,
+    "B_fraction_missed_unknown": 1.0
+  },
+  "feature_shapes": {
+    "backbone": [
+      [
+        5,
+        512,
+        150,
+        134
+      ],
+      [
+        5,
+        1024,
+        75,
+        67
+      ],
+      [
+        5,
+        2048,
+        38,
+        34
+      ]
+    ],
+    "backbone_masks": [
+      [
+        5,
+        150,
+        134
+      ],
+      [
+        5,
+        75,
+        67
+      ],
+      [
+        5,
+        38,
+        34
+      ]
+    ],
+    "projected": [
+      [
+        5,
+        256,
+        150,
+        134
+      ],
+      [
+        5,
+        256,
+        75,
+        67
+      ],
+      [
+        5,
+        256,
+        38,
+        34
+      ],
+      [
+        5,
+        256,
+        19,
+        17
+      ]
+    ],
+    "projected_masks": [
+      [
+        5,
+        150,
+        134
+      ],
+      [
+        5,
+        75,
+        67
+      ],
+      [
+        5,
+        38,
+        34
+      ],
+      [
+        5,
+        19,
+        17
+      ]
+    ],
+    "spatial_shapes": [
+      [
+        150,
+        134
+      ],
+      [
+        75,
+        67
+      ],
+      [
+        38,
+        34
+      ],
+      [
+        19,
+        17
+      ]
+    ],
+    "encoder": [
+      5,
+      26740,
+      256
+    ],
+    "decoder_queries": [
+      6,
+      5,
+      100,
+      256
+    ],
+    "decoder_references": [
+      6,
+      5,
+      100,
+      2
+    ],
+    "layer_boxes": [
+      6,
+      5,
+      100,
+      4
+    ],
+    "layer_logits": [
+      6,
+      5,
+      100,
+      81
+    ],
+    "layer_distance": [
+      6,
+      5,
+      100
+    ]
+  },
+  "feature_hooks_bitwise_equal": true,
+  "seconds": 3.1093626022338867,
+  "coordinate_convention": "continuous XYXY in original image pixels; GT xmin/ymin minus 1, xmax/ymax unchanged (PROB loader)",
+  "grouping": "nearest of all annotated GT; >=0.5 and non-difficult -> known/unknown; max<0.1 -> background; otherwise ambiguous. Ties XML order.",
+  "A_definition": "missed by official unknown one-to-one matching but some raw final-layer query IoU>=0.5; includes wrong class, ranking and duplicates, not proof of low objectness",
+  "B_definition": "missed by official unknown one-to-one matching and all raw queries IoU<0.5",
+  "coverage_definition": "unique non-difficult GT, independent max over queries (query reuse allowed); no label/score threshold; TopK sorted by stated score",
+  "official_protocol": "unmodified supplied split including duplicate IDs, original evaluator score/box rounding, IoU>0.5, VOC07 AP11; no new NMS/threshold",
+  "inference_score": "official OWOBJ uses classifier sigmoid and global top100 query/class pairs; latent Gaussian objectness is NOT multiplied again",
+  "objectness_distributions": {
+    "known": {
+      "latent": {
+        "count": 2,
+        "mean": 0.05791541934013367,
+        "quantiles_05_25_50_75_95": [
+          0.055505176447331904,
+          0.056576396338641644,
+          0.057915421202778816,
+          0.05925444606691599,
+          0.06032566595822573
+        ]
+      },
+      "classifier_unknown": {
+        "count": 2,
+        "mean": 0.3571665287017822,
+        "quantiles_05_25_50_75_95": [
+          0.33911421746015546,
+          0.3471374735236168,
+          0.3571665436029434,
+          0.36719561368227005,
+          0.3752188697457314
+        ]
+      }
+    },
+    "unknown": {
+      "latent": {
+        "count": 1,
+        "mean": 0.0611119382083416,
+        "quantiles_05_25_50_75_95": [
+          0.0611119382083416,
+          0.0611119382083416,
+          0.0611119382083416,
+          0.0611119382083416,
+          0.0611119382083416
+        ]
+      },
+      "classifier_unknown": {
+        "count": 1,
+        "mean": 0.3559125065803528,
+        "quantiles_05_25_50_75_95": [
+          0.3559125065803528,
+          0.3559125065803528,
+          0.3559125065803528,
+          0.3559125065803528,
+          0.3559125065803528
+        ]
+      }
+    },
+    "background": {
+      "latent": {
+        "count": 2671,
+        "mean": 0.05928140506148338,
+        "quantiles_05_25_50_75_95": [
+          0.05364682711660862,
+          0.05711284652352333,
+          0.05906067043542862,
+          0.061499256640672684,
+          0.06630350649356842
+        ]
+      },
+      "classifier_unknown": {
+        "count": 2671,
+        "mean": 0.358583927154541,
+        "quantiles_05_25_50_75_95": [
+          0.3292470872402191,
+          0.3443692922592163,
+          0.3574128746986389,
+          0.37170232832431793,
+          0.3917636573314667
+        ]
+      }
+    },
+    "ambiguous": {
+      "latent": {
+        "count": 526,
+        "mean": 0.0597115233540535,
+        "quantiles_05_25_50_75_95": [
+          0.055195110850036144,
+          0.05755046010017395,
+          0.05922463722527027,
+          0.06140613742172718,
+          0.06683233939111233
+        ]
+      },
+      "classifier_unknown": {
+        "count": 526,
+        "mean": 0.35287901759147644,
+        "quantiles_05_25_50_75_95": [
+          0.3273913934826851,
+          0.3414895087480545,
+          0.3517233729362488,
+          0.36297687143087387,
+          0.3839143440127373
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "scope": "synthetic_memory_only_no_detection_metrics",
+  "batch_size": 2,
+  "padded_shape": [
+    2,
+    3,
+    1333,
+    1333
+  ],
+  "loss_finite": true,
+  "peak_memory_mib": 10621.2607421875
+}
