@@ -44,13 +44,21 @@ def generate(final=False):
  '运行日志logs/，PID及分步骤真实退出码run_state/steps.jsonl，训练epoch/批位置run_state/stage_*_status.json，最终GPU与磁盘run_state/final_resources.txt。',
  '## 产物与下一步',
  '只有Stage B和两阶段官方评价全部成功才可关闭实例。S2/R1后续如使用B1权重必须改为TOWOD Task2累计40类、Unknown80及本次相同预处理；现有Task1类别掩码/GT划分/特征缓存不可直接混用。本任务不修改或运行S2/R1。']
+ lines += ['## 与论文Task2的数值差异（百分点）']
+ for name,item in [('Stage A',ea),('Stage B',eb)]:
+  if item:
+   m=item['metrics'];lines.append(f"{name}减论文参考：Previous={m['PK_AP50']-58.4:+.6f}，Current={m['CK_AP50']-34.4:+.6f}，Both={m['K_AP50']-45.7:+.6f}，U-Recall={m['U_R50']-23.8:+.6f}百分点。只描述单次复现与报告值差异，不作显著性/因果结论，不据测试结果调参。")
+  else:lines.append(name+'尚未完成，不能计算差异。')
  (E/'reports/B1_PROB_OWOBJ_Task2复现报告.md').write_text('\n'.join(lines)+'\n')
  comp=['# B0_B1增量训练对照',f'更新时间：{now()}，B1状态：'+('完成' if all([A,B,ea,eb]) else '执行中，Task2指标待完成'),'',
  '|项目|B0 Task1|B1 Task2|','|---|---|---|','|Known|VOC20索引0–19|旧20不变，新20–39，共40|','|Unknown|其余60类，统一80|其余40类，统一80|','|模型|81维分类头、100query|维度不变，新增有效logit20–39|',
  '|继承|训练epoch0–40|B0 e40→Stage A41–50→Stage B51–110|','|旧类保留|Task1训练|完整模型继承，Stage B回放旧新exemplar|',
  '|防遗忘机制|无跨任务回放|官方阶段A仅新类；阶段B平衡回放；没有新方法|',
  f'B0 Known mAP50={orig["K_AP50"]:.6f}%，U-Recall50={orig["U_R50"]:.6f}%，U-AP50={orig["U_AP50"]:.6f}%，WI={orig["WI"]:.8f}，A-OSE={orig["AOSA"]:.0f}。']
- for n,item in [('B1 Stage A',ea),('B1 Stage B',eb)]:comp.append(n+'：'+(json.dumps(item['metrics'],ensure_ascii=False) if item else '待运行，无结果。'))
+ for n,item in [('B1 Stage A',ea),('B1 Stage B',eb)]:
+  comp.append(n+'：'+(json.dumps(item['metrics'],ensure_ascii=False) if item else '待运行，无结果。'))
+  if item:
+   m=item['metrics'];comp.append(f"{n}旧20类AP相对B0变化{m['PK_AP50']-orig['K_AP50']:+.6f}百分点；U-Recall数值差{m['U_R50']-orig['U_R50']:+.6f}百分点、U-AP差{m['U_AP50']-orig['U_AP50']:+.6f}百分点，但Unknown类集合不同，不能据此声称同一GT上提升/退化。")
  if baseline_coverage is not None:comp.append(f'B0原始query对Unknown60 GT覆盖率IoU>=0.5为{100*baseline_coverage:.6f}%；B1仅对未来40类统计，不能将不同GT集合直接比较。')
  comp += ['B0 Known20与B1 Both Known40不是同一集合，不将两者直接解读为性能升降；B1 Previous20与B0 Known20类名一致，可用于旧类保留诊断。Unknown定义从60类变40类，Recall/AP变化也受目标集合变化影响。',
  'S2/R1后续可将B1 Stage B checkpoint作为Task2起点，但必须同时采用40类掩码与GT映射并重提特征，不能替换原Task1权重后沿用旧缓存。本次没有修改S2/R1。']
