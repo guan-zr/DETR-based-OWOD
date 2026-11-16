@@ -7,7 +7,7 @@ def get(p,default=None):return json.loads(p.read_text()) if p.exists() else defa
 def generate(final=False):
  A=get(E/'run_state/stage_a_complete.json');B=get(E/'run_state/stage_b_complete.json')
  ea=get(E/'evaluation/stage_a/manifest.json');eb=get(E/'evaluation/stage_b/manifest.json');status=get(E/'run_state/pipeline.json',{})
- orig=get(B0/'evaluations/final/official_metrics.json');storage=get(E/'reports/storage_budget.json',{});environment=get(E/'reports/environment.json',{})
+ orig=get(B0/'evaluations/final/official_metrics.json');baseline_query=get(B0/'query_analysis/final/summary.json',{});baseline_coverage=baseline_query.get('coverage',{}).get('unknown',{}).get('all',{}).get('0.5');storage=get(E/'reports/storage_budget.json',{});environment=get(E/'reports/environment.json',{})
  t1=get(E/'replay/learned_owod_t1_ft.provenance.json');t2=get(E/'replay/learned_owod_t2_ft.provenance.json')
  lines=['# B1_PROB_OWOBJ_Task2复现报告',f'更新时间：{now()}。状态：'+('全部训练与评价完成' if all([A,B,ea,eb]) else '执行中 / 尚未完成，不作为最终结果报告'),'',
  '## 实验与协议',
@@ -36,6 +36,7 @@ def generate(final=False):
  '## 对照与解释限制',
  f'B0官方Task1：{json.dumps(orig,ensure_ascii=False)}。其Known为旧20，Unknown为后60；Task2 Known为40、Unknown为后40。不同任务Known mAP不能解释为同一集合变化；可用B1 PK_AP50对照B0 K_AP50检查旧类，但检测竞争集合也已改变。',
  '论文参考来源：https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Open-World_Objectness_Modeling_Unifies_Novel_Object_Detection_CVPR_2025_paper.html ，B0已有sources/owobj_paper.txt表1。单次确定性种子、无多seed统计，不做显著性主张。差异可能来自B0起点、环境版本、单卡累积与BN语义、补建exemplar RNG及上游脚本协议错误，不能据此单独归因某一因素。',
+ f'B0原始Query覆盖率（Unknown60，unique非difficult GT）={100*baseline_coverage:.6f}%。Task2将Unknown缩小到40类，数值不可当作同一GT集合的改进。' if baseline_coverage is not None else 'B0 Query覆盖率基线不可用。',
  '## 资源、恢复与退出',
  f'存储预算：{json.dumps(storage,ensure_ascii=False)}',
  '每阶段仅滚动latest+previous，最终权重为latest硬链接；原子临时写入+fsync，每100次更新及epoch末保存，低于7GiB在更新边界保存并退出75，5GiB为写入最低门槛。不会删除B0/R0/R1文件。resume恢复B1本阶段优化器/scheduler/RNG/批偏移；恢复命令configs/resume.sh。',
@@ -50,6 +51,7 @@ def generate(final=False):
  '|防遗忘机制|无跨任务回放|官方阶段A仅新类；阶段B平衡回放；没有新方法|',
  f'B0 Known mAP50={orig["K_AP50"]:.6f}%，U-Recall50={orig["U_R50"]:.6f}%，U-AP50={orig["U_AP50"]:.6f}%，WI={orig["WI"]:.8f}，A-OSE={orig["AOSA"]:.0f}。']
  for n,item in [('B1 Stage A',ea),('B1 Stage B',eb)]:comp.append(n+'：'+(json.dumps(item['metrics'],ensure_ascii=False) if item else '待运行，无结果。'))
+ if baseline_coverage is not None:comp.append(f'B0原始query对Unknown60 GT覆盖率IoU>=0.5为{100*baseline_coverage:.6f}%；B1仅对未来40类统计，不能将不同GT集合直接比较。')
  comp += ['B0 Known20与B1 Both Known40不是同一集合，不将两者直接解读为性能升降；B1 Previous20与B0 Known20类名一致，可用于旧类保留诊断。Unknown定义从60类变40类，Recall/AP变化也受目标集合变化影响。',
  'S2/R1后续可将B1 Stage B checkpoint作为Task2起点，但必须同时采用40类掩码与GT映射并重提特征，不能替换原Task1权重后沿用旧缓存。本次没有修改S2/R1。']
  (E/'reports/B0_B1增量训练对照.md').write_text('\n'.join(comp)+'\n')
