@@ -22,7 +22,9 @@ def run(stage,smoke=0):
   write(out/'strict_load.json',dict(missing_keys=msg.missing_keys,unexpected_keys=msg.unexpected_keys))
   if smoke:
    import copy
-   ds=copy.copy(base);indices=list(range(min(smoke,len(ds))))
+   ds=copy.copy(base)
+   voc=[i for i,s in enumerate(base.image_set) if len(s)==6];coco=[i for i,s in enumerate(base.image_set) if len(s)==12]
+   indices=voc[:min(4,smoke)]+coco[:max(0,smoke-min(4,smoke))]
    for attr in ['images','annotations','imgids','image_set']:setattr(ds,attr,[getattr(base,attr)[i] for i in indices])
    ds.imgid2annotations=dict(zip(ds.imgids,ds.annotations));base=ds
    loader=DataLoader(ds,batch_size=5,shuffle=False,num_workers=4,collate_fn=official.utils.collate_fn,pin_memory=True)
