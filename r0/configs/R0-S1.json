@@ -1,0 +1,53 @@
+{
+  "name": "R0-S1",
+  "task": 1,
+  "source": "S1",
+  "data_root": "/root/autodl-tmp/datasets/OWOD_B0",
+  "train_split": "owod_t1_train",
+  "eval_split": "owod_all_task_test",
+  "baseline_checkpoint": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/checkpoints/task1/checkpoint0040.pth",
+  "b0_status": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/reports/train_status.json",
+  "channels": [
+    256,
+    256,
+    256,
+    256
+  ],
+  "mask_ratio": 0.6,
+  "autoencoder": {
+    "hidden": 64,
+    "bottleneck": 32,
+    "depth": 1
+  },
+  "optimizer": {
+    "lr": 0.0001,
+    "weight_decay": 0.0001
+  },
+  "steps": 2000,
+  "batch_size": 1,
+  "num_workers": 0,
+  "seed": 73,
+  "resize": {
+    "short_side": 800,
+    "max_size": 1333
+  },
+  "roi": {
+    "output_size": 7,
+    "sampling_ratio": 2,
+    "min_box_size": 1.0,
+    "min_valid_fraction": 0.5
+  },
+  "evaluation": {
+    "mask_ratio": 0.6,
+    "repeats": 4,
+    "positive_iou": 0.5,
+    "background_iou": 0.1,
+    "background_proposals": 64,
+    "include_final_detections": false,
+    "background_rule": "disjoint_gt"
+  },
+  "output": "/root/autodl-tmp/experiments/R0/R0-S1",
+  "b0_analysis_summary": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/query_analysis/final/summary.json",
+  "b0_pipeline_pid": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/pipeline.pid",
+  "b0_pipeline_log": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/logs/pipeline.log"
+}
