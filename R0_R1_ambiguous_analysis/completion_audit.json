@@ -1,0 +1,121 @@
+{
+  "complete": true,
+  "all_requested_outputs_present": true,
+  "figures": [
+    {
+      "file": "R0_S2_四类分布.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 392894,
+      "sha256": "94b3dd0045c57118d7c259aca70222a71513d5dfef5a0d1359b29fe4e0e31f1e"
+    },
+    {
+      "file": "R0_S2_前景Ambiguous背景三组分布.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 372959,
+      "sha256": "ccebf78a4915e30389ffaacadbf95a7ee5a0847f4ac308c17426bde791444352"
+    },
+    {
+      "file": "R0_S2_Ambiguous按IoU分组分布.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 517336,
+      "sha256": "23058960df1418bd7cf1f068d03556cc2dbb76328e4831f183a914ecb64f706a"
+    },
+    {
+      "file": "R0_S2_四类CDF.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 382812,
+      "sha256": "a78782390e686510e6ee5bcd326e636523c3fac1c3033529d1abb333aef25ba4"
+    },
+    {
+      "file": "R0_S2_Ambiguous按IoU分组CDF.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 400978,
+      "sha256": "c9c9f50591822c9135f376d944852884b327c7dc12fbb27b7d51c513fcdda93b"
+    },
+    {
+      "file": "R1_L6_四类分布.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 393020,
+      "sha256": "e38ce37d1215e4dd10192912f12e1a188583f0a57ae40d3d902f0466ecaf340d"
+    },
+    {
+      "file": "R1_L6_前景Ambiguous背景三组分布.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 375960,
+      "sha256": "e9a064b9efa007ed8ad25303119502b64aad4aafa3a413d996c2ce688be0d023"
+    },
+    {
+      "file": "R1_L6_Ambiguous按IoU分组分布.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 515594,
+      "sha256": "a188e2aee7b77c06a252c62812b3b191f7bdeddc8889ef8f8ff643b210a167a9"
+    },
+    {
+      "file": "R1_L6_四类CDF.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 378025,
+      "sha256": "e7ff2d5a43a25afc584a073bde7130f5ebb086e1dd4fb1540e5717d25bed48cc"
+    },
+    {
+      "file": "R1_L6_Ambiguous按IoU分组CDF.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 388359,
+      "sha256": "848b56b5f8f77b134c638ee3d372ee83da0b7be9654b8f4531e81493e68c3390"
+    },
+    {
+      "file": "Gaussian_四类分布.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 357077,
+      "sha256": "7bf0cff235818fb06c5d855bafd0d36e04ce8c9244a4ea4882628aafa29cc610"
+    },
+    {
+      "file": "Gaussian_前景Ambiguous背景三组分布.png",
+      "width": 3888,
+      "height": 2124,
+      "dpi": 360,
+      "bytes": 348627,
+      "sha256": "b1a8eec57c4c54eb64b1dbec7364c8a12d70feb972fef58172b2272ddfa7e312"
+    }
+  ],
+  "required_core_figures": 6,
+  "gaussian_figures": 2,
+  "cdf_figures": 4,
+  "summary_rows": 15,
+  "ambiguous_iou_stats_rows": 8,
+  "counts_match_original": true,
+  "all_original_hashed_inputs_unchanged": true,
+  "original_hashed_files": 299,
+  "query_total": 911900,
+  "images": 9119,
+  "ambiguous_iou_subgroup_counts": [
+    184279,
+    162583,
+    109936,
+    5639
+  ],
+  "no_training_or_inference": true,
+  "missing_fields_remaining": [],
+  "uncompleted_figures": []
+}

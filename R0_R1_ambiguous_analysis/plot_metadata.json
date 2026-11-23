@@ -1,0 +1,518 @@
+{
+  "method": "full-population histogram-binned Gaussian KDE approximation with reflected boundaries",
+  "n_per_method": 911900,
+  "bins": 4096,
+  "bandwidth": "0.9 * min(pooled sample std, pooled IQR/1.349) * pooled_N^(-1/5); shared within method",
+  "boundary": "reflection at zero; Gaussian baseline also at one",
+  "range": "full data range plus 4 bandwidths for reconstruction errors; Gaussian [0,1]",
+  "weighting": "each query equally weighted within group; each group density integrates to one",
+  "font": "/root/autodl-tmp/experiments/R0_R1_ambiguous_analysis/fonts/NotoSansCJKsc-Regular.otf",
+  "font_family": "[0.5, 1] (difficult)",
+  "dpi": 360,
+  "figures": [
+    {
+      "file": "R0_S2_四类分布.png",
+      "model": "R0_S2",
+      "kind": "four_groups",
+      "purpose": "定位 Known、Unknown、Background、Ambiguous 的相对分布",
+      "bandwidth": 0.0045552132541099135,
+      "max_density": 14.598409076024948,
+      "y_limit": 15.766281802106946
+    },
+    {
+      "file": "R0_S2_前景Ambiguous背景三组分布.png",
+      "model": "R0_S2",
+      "kind": "three_groups",
+      "purpose": "简洁表达明确前景、Ambiguous、背景的位置和重叠",
+      "bandwidth": 0.0045552132541099135,
+      "max_density": 14.598409076024948,
+      "y_limit": 15.766281802106946
+    },
+    {
+      "file": "R0_S2_Ambiguous按IoU分组分布.png",
+      "model": "R0_S2",
+      "kind": "iou_groups",
+      "purpose": "检验 Ambiguous 内部异质性；观察随重叠变化的分布",
+      "bandwidth": 0.0045552132541099135,
+      "max_density": 14.598409076024948,
+      "y_limit": 15.766281802106946
+    },
+    {
+      "file": "R0_S2_四类CDF.png",
+      "model": "R0_S2",
+      "kind": "cdf_four",
+      "purpose": "核验分布曲线中的位置差异及长尾，避免只比较主峰"
+    },
+    {
+      "file": "R0_S2_Ambiguous按IoU分组CDF.png",
+      "model": "R0_S2",
+      "kind": "cdf_iou",
+      "purpose": "核验分布曲线中的位置差异及长尾，避免只比较主峰"
+    },
+    {
+      "file": "R1_L6_四类分布.png",
+      "model": "R1_L6",
+      "kind": "four_groups",
+      "purpose": "定位 Known、Unknown、Background、Ambiguous 的相对分布",
+      "bandwidth": 1.0018727759234357e-05,
+      "max_density": 5780.004235635835,
+      "y_limit": 6242.404574486703
+    },
+    {
+      "file": "R1_L6_前景Ambiguous背景三组分布.png",
+      "model": "R1_L6",
+      "kind": "three_groups",
+      "purpose": "简洁表达明确前景、Ambiguous、背景的位置和重叠",
+      "bandwidth": 1.0018727759234357e-05,
+      "max_density": 5780.004235635835,
+      "y_limit": 6242.404574486703
+    },
+    {
+      "file": "R1_L6_Ambiguous按IoU分组分布.png",
+      "model": "R1_L6",
+      "kind": "iou_groups",
+      "purpose": "检验 Ambiguous 内部异质性；观察随重叠变化的分布",
+      "bandwidth": 1.0018727759234357e-05,
+      "max_density": 5780.004235635835,
+      "y_limit": 6242.404574486703
+    },
+    {
+      "file": "R1_L6_四类CDF.png",
+      "model": "R1_L6",
+      "kind": "cdf_four",
+      "purpose": "核验分布曲线中的位置差异及长尾，避免只比较主峰"
+    },
+    {
+      "file": "R1_L6_Ambiguous按IoU分组CDF.png",
+      "model": "R1_L6",
+      "kind": "cdf_iou",
+      "purpose": "核验分布曲线中的位置差异及长尾，避免只比较主峰"
+    },
+    {
+      "file": "Gaussian_四类分布.png",
+      "model": "Gaussian",
+      "kind": "four_groups",
+      "purpose": "定位 Known、Unknown、Background、Ambiguous 的相对分布",
+      "bandwidth": 0.00068805522600748,
+      "max_density": 39.629317545673096,
+      "y_limit": 42.799662949326944
+    },
+    {
+      "file": "Gaussian_前景Ambiguous背景三组分布.png",
+      "model": "Gaussian",
+      "kind": "three_groups",
+      "purpose": "简洁表达明确前景、Ambiguous、背景的位置和重叠",
+      "bandwidth": 0.00068805522600748,
+      "max_density": 39.629317545673096,
+      "y_limit": 42.799662949326944
+    }
+  ],
+  "density_checks": [
+    {
+      "model": "R0_S2",
+      "group": "Known",
+      "n": 140527,
+      "integral": 1.0,
+      "bandwidth": 0.0045552132541099135,
+      "grid_bins": 4096,
+      "bin_width": 0.0001573485414957549,
+      "histogram_count": 140527,
+      "min": 0.02799247484654188,
+      "max": 0.5531079471111298
+    },
+    {
+      "model": "R0_S2",
+      "group": "Unknown",
+      "n": 21382,
+      "integral": 1.0000000000000002,
+      "bandwidth": 0.0045552132541099135,
+      "grid_bins": 4096,
+      "bin_width": 0.0001573485414957549,
+      "histogram_count": 21382,
+      "min": 0.02581061329692602,
+      "max": 0.5246469154953957
+    },
+    {
+      "model": "R0_S2",
+      "group": "Background",
+      "n": 287554,
+      "integral": 0.9999999999999999,
+      "bandwidth": 0.0045552132541099135,
+      "grid_bins": 4096,
+      "bin_width": 0.0001573485414957549,
+      "histogram_count": 287554,
+      "min": 0.01567987911403179,
+      "max": 0.5498438701033592
+    },
+    {
+      "model": "R0_S2",
+      "group": "Ambiguous",
+      "n": 462437,
+      "integral": 1.0000000000000002,
+      "bandwidth": 0.0045552132541099135,
+      "grid_bins": 4096,
+      "bin_width": 0.0001573485414957549,
+      "histogram_count": 462437,
+      "min": 0.01751243742182851,
+      "max": 0.6262787729501724
+    },
+    {
+      "model": "R0_S2",
+      "group": "Foreground",
+      "n": 161909,
+      "integral": 1.0,
+      "bandwidth": 0.0045552132541099135,
+      "grid_bins": 4096,
+      "bin_width": 0.0001573485414957549,
+      "histogram_count": 161909,
+      "min": 0.02581061329692602,
+      "max": 0.5531079471111298
+    },
+    {
+      "model": "R0_S2",
+      "group": "Ambiguous_IoU_0",
+      "n": 184279,
+      "integral": 1.0,
+      "bandwidth": 0.0045552132541099135,
+      "grid_bins": 4096,
+      "bin_width": 0.0001573485414957549,
+      "histogram_count": 184279,
+      "min": 0.01751243742182851,
+      "max": 0.6262787729501724
+    },
+    {
+      "model": "R0_S2",
+      "group": "Ambiguous_IoU_1",
+      "n": 162583,
+      "integral": 1.0000000000000002,
+      "bandwidth": 0.0045552132541099135,
+      "grid_bins": 4096,
+      "bin_width": 0.0001573485414957549,
+      "histogram_count": 162583,
+      "min": 0.020024261670187116,
+      "max": 0.5672773197293282
+    },
+    {
+      "model": "R0_S2",
+      "group": "Ambiguous_IoU_2",
+      "n": 109936,
+      "integral": 1.0000000000000002,
+      "bandwidth": 0.0045552132541099135,
+      "grid_bins": 4096,
+      "bin_width": 0.0001573485414957549,
+      "histogram_count": 109936,
+      "min": 0.024153434205800295,
+      "max": 0.5527603700757027
+    },
+    {
+      "model": "R0_S2",
+      "group": "Ambiguous_IoU_3",
+      "n": 5639,
+      "integral": 1.0,
+      "bandwidth": 0.0045552132541099135,
+      "grid_bins": 4096,
+      "bin_width": 0.0001573485414957549,
+      "histogram_count": 5639,
+      "min": 0.07110261730849743,
+      "max": 0.5560171231627464
+    },
+    {
+      "model": "R1_L6",
+      "group": "Known",
+      "n": 140527,
+      "integral": 1.0,
+      "bandwidth": 1.0018727759234357e-05,
+      "grid_bins": 4096,
+      "bin_width": 5.844875904752914e-07,
+      "histogram_count": 140527,
+      "min": 0.00010289426427334547,
+      "max": 0.0022927087265998125
+    },
+    {
+      "model": "R1_L6",
+      "group": "Unknown",
+      "n": 21382,
+      "integral": 1.0000000000000002,
+      "bandwidth": 1.0018727759234357e-05,
+      "grid_bins": 4096,
+      "bin_width": 5.844875904752914e-07,
+      "histogram_count": 21382,
+      "min": 9.524801862426102e-05,
+      "max": 0.002353986259549856
+    },
+    {
+      "model": "R1_L6",
+      "group": "Background",
+      "n": 287554,
+      "integral": 1.0,
+      "bandwidth": 1.0018727759234357e-05,
+      "grid_bins": 4096,
+      "bin_width": 5.844875904752914e-07,
+      "histogram_count": 287554,
+      "min": 4.935494507662952e-05,
+      "max": 0.0020117545500397682
+    },
+    {
+      "model": "R1_L6",
+      "group": "Ambiguous",
+      "n": 462437,
+      "integral": 1.0,
+      "bandwidth": 1.0018727759234357e-05,
+      "grid_bins": 4096,
+      "bin_width": 5.844875904752914e-07,
+      "histogram_count": 462437,
+      "min": 5.400173176894896e-05,
+      "max": 0.002272479934617877
+    },
+    {
+      "model": "R1_L6",
+      "group": "Foreground",
+      "n": 161909,
+      "integral": 1.0,
+      "bandwidth": 1.0018727759234357e-05,
+      "grid_bins": 4096,
+      "bin_width": 5.844875904752914e-07,
+      "histogram_count": 161909,
+      "min": 9.524801862426102e-05,
+      "max": 0.002353986259549856
+    },
+    {
+      "model": "R1_L6",
+      "group": "Ambiguous_IoU_0",
+      "n": 184279,
+      "integral": 1.0,
+      "bandwidth": 1.0018727759234357e-05,
+      "grid_bins": 4096,
+      "bin_width": 5.844875904752914e-07,
+      "histogram_count": 184279,
+      "min": 5.400173176894896e-05,
+      "max": 0.0022395330015569925
+    },
+    {
+      "model": "R1_L6",
+      "group": "Ambiguous_IoU_1",
+      "n": 162583,
+      "integral": 1.0,
+      "bandwidth": 1.0018727759234357e-05,
+      "grid_bins": 4096,
+      "bin_width": 5.844875904752914e-07,
+      "histogram_count": 162583,
+      "min": 5.7831392041407526e-05,
+      "max": 0.002272479934617877
+    },
+    {
+      "model": "R1_L6",
+      "group": "Ambiguous_IoU_2",
+      "n": 109936,
+      "integral": 1.0000000000000002,
+      "bandwidth": 1.0018727759234357e-05,
+      "grid_bins": 4096,
+      "bin_width": 5.844875904752914e-07,
+      "histogram_count": 109936,
+      "min": 8.030990284169093e-05,
+      "max": 0.0022242336999624968
+    },
+    {
+      "model": "R1_L6",
+      "group": "Ambiguous_IoU_3",
+      "n": 5639,
+      "integral": 1.0,
+      "bandwidth": 1.0018727759234357e-05,
+      "grid_bins": 4096,
+      "bin_width": 5.844875904752914e-07,
+      "histogram_count": 5639,
+      "min": 0.0001479048078181222,
+      "max": 0.0021518387366086245
+    },
+    {
+      "model": "Gaussian",
+      "group": "Known",
+      "n": 140527,
+      "integral": 0.9999999999999998,
+      "bandwidth": 0.00068805522600748,
+      "grid_bins": 4096,
+      "bin_width": 0.000244140625,
+      "histogram_count": 140527,
+      "min": 0.20317599177360535,
+      "max": 0.7893702983856201
+    },
+    {
+      "model": "Gaussian",
+      "group": "Unknown",
+      "n": 21382,
+      "integral": 0.9999999999999999,
+      "bandwidth": 0.00068805522600748,
+      "grid_bins": 4096,
+      "bin_width": 0.000244140625,
+      "histogram_count": 21382,
+      "min": 0.21032299101352692,
+      "max": 0.7642459869384766
+    },
+    {
+      "model": "Gaussian",
+      "group": "Background",
+      "n": 287554,
+      "integral": 1.0,
+      "bandwidth": 0.00068805522600748,
+      "grid_bins": 4096,
+      "bin_width": 0.000244140625,
+      "histogram_count": 287554,
+      "min": 0.20558680593967438,
+      "max": 0.7684526443481445
+    },
+    {
+      "model": "Gaussian",
+      "group": "Ambiguous",
+      "n": 462437,
+      "integral": 1.0,
+      "bandwidth": 0.00068805522600748,
+      "grid_bins": 4096,
+      "bin_width": 0.000244140625,
+      "histogram_count": 462437,
+      "min": 0.1987224519252777,
+      "max": 0.7774264216423035
+    },
+    {
+      "model": "Gaussian",
+      "group": "Foreground",
+      "n": 161909,
+      "integral": 0.9999999999999999,
+      "bandwidth": 0.00068805522600748,
+      "grid_bins": 4096,
+      "bin_width": 0.000244140625,
+      "histogram_count": 161909,
+      "min": 0.20317599177360535,
+      "max": 0.7893702983856201
+    }
+  ],
+  "cdf_checks": [
+    {
+      "model": "R0_S2",
+      "kind": "four",
+      "group": "Known",
+      "n": 140527,
+      "unique_values": 140424,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R0_S2",
+      "kind": "four",
+      "group": "Unknown",
+      "n": 21382,
+      "unique_values": 21378,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R0_S2",
+      "kind": "four",
+      "group": "Background",
+      "n": 287554,
+      "unique_values": 287225,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R0_S2",
+      "kind": "four",
+      "group": "Ambiguous",
+      "n": 462437,
+      "unique_values": 461597,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R0_S2",
+      "kind": "iou",
+      "group": "[0, 0.1)",
+      "n": 184279,
+      "unique_values": 184160,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R0_S2",
+      "kind": "iou",
+      "group": "[0.1, 0.3)",
+      "n": 162583,
+      "unique_values": 162471,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R0_S2",
+      "kind": "iou",
+      "group": "[0.3, 0.5)",
+      "n": 109936,
+      "unique_values": 109871,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R0_S2",
+      "kind": "iou",
+      "group": "[0.5, 1] (difficult)",
+      "n": 5639,
+      "unique_values": 5639,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R1_L6",
+      "kind": "four",
+      "group": "Known",
+      "n": 140527,
+      "unique_values": 139989,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R1_L6",
+      "kind": "four",
+      "group": "Unknown",
+      "n": 21382,
+      "unique_values": 21363,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R1_L6",
+      "kind": "four",
+      "group": "Background",
+      "n": 287554,
+      "unique_values": 285235,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R1_L6",
+      "kind": "four",
+      "group": "Ambiguous",
+      "n": 462437,
+      "unique_values": 457296,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R1_L6",
+      "kind": "iou",
+      "group": "[0, 0.1)",
+      "n": 184279,
+      "unique_values": 183367,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R1_L6",
+      "kind": "iou",
+      "group": "[0.1, 0.3)",
+      "n": 162583,
+      "unique_values": 161941,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R1_L6",
+      "kind": "iou",
+      "group": "[0.3, 0.5)",
+      "n": 109936,
+      "unique_values": 109619,
+      "endpoint": 1.0
+    },
+    {
+      "model": "R1_L6",
+      "kind": "iou",
+      "group": "[0.5, 1] (difficult)",
+      "n": 5639,
+      "unique_values": 5639,
+      "endpoint": 1.0
+    }
+  ]
+}

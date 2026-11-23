@@ -1,0 +1,1845 @@
+{
+  "primary_question": "DETR 中重建误差能否区分前景与背景；Ambiguous 中是否也有物体性诊断信息",
+  "source_files": [
+    {
+      "path": "/root/autodl-tmp/experiments/R0/controls_round2/protocol.json",
+      "role": "R0 second-round frozen protocol",
+      "bytes": 4471,
+      "sha256": "7165b68b71ea1f276d0d26d7dec27feed31247794c82f97b14ef628c1e643c30"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/controls_round2/evaluation/complete.json",
+      "role": "R0 second-round method/scale order and complete population",
+      "bytes": 553877,
+      "sha256": "8ebcbc86a8abbee32a3ae342c4f25ab15b321d37bffe469c637c8f249e829f31"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/controls_round2/prepared/complete.json",
+      "role": "R0 metadata provenance",
+      "bytes": 312453,
+      "sha256": "e8eff55fcd230ca26f4f662290b2f19caec65124ba4119508eb8358a54bd8c5c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/controls_round2/prepared/metadata.csv.gz",
+      "role": "R0 second-round candidate keys, clipped boxes, disjoint_gt labels",
+      "bytes": 35644865,
+      "sha256": "035285debdde3110c2bca4d2f62d1bf70dfdb7c7cfe3ae58bc2019dc8362c1fe"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/controls_round2/analysis/scores.npy",
+      "role": "R0 second-round scores; select S2 / trained73 / overall",
+      "bytes": 877985728,
+      "sha256": "727dfc05ebc12f3b2e4f9de9838ae347cc6a8d9fda5b961772c51f3cc4c7bd9f"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/controls_round2/analysis/common_valid.npy",
+      "role": "R0 common-valid mask",
+      "bytes": 5487538,
+      "sha256": "a6631ef5f1956468f34ca2259d0b8bd256205511682c53f3c7f5218bc929e705"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/controls_round2/analysis/query_scores.npy",
+      "role": "R0 same-forward B0 Gaussian scalar baseline",
+      "bytes": 17559840,
+      "sha256": "34147976dacbacf4dd61b292e0170715ae85f94e422ef24456e861285b2dc847"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/complete.json",
+      "role": "Geometry-only original candidate-cache manifest",
+      "bytes": 493289,
+      "sha256": "4c413ddafe3fb0b9b49736a83cf53cd7c04f12b64b46ffa31efed3ecc0c4a218"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00000/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2346027,
+      "sha256": "1a96e11238f843d2a54857abb81aa0829bcebad6dc8e6bb5d5afc4b43cc3184c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00032/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2374280,
+      "sha256": "8ec4659d59bf987052c34ac9252444c2342d4ff19bb8d0081ca1dd25456f1b65"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00064/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2363742,
+      "sha256": "41989ab9e228ebdfebfe038afb3f004f5c328669577838d26f467f6b40cc46d7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00096/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2343094,
+      "sha256": "fdade23a841f1ec42b823ceae1275c3a9e9112c61d8bf6ae6908b5be6991bfcd"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00128/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2355880,
+      "sha256": "7b5b4afbb3975125a24530b4c58a0246e30b4ebdf18584bf7d38cc97dc88ef12"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00160/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2329464,
+      "sha256": "ced5a95e632c1168507c49ea86e6463ef4b3fcd628a8e9beefd7357f74c971be"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00192/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2359958,
+      "sha256": "2519952f966a8676363384390f3126518d276f89f609128f8279260267c3cd2a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00224/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2349523,
+      "sha256": "3cbe22f284475d19aba06be0044eb55880cc39bec6ba71144e9a2927f77cdb19"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00256/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2341320,
+      "sha256": "f7b5daa9a3d4bdf65240b4640d2bb687bf155281740157e13eeefdd45f89ee80"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00288/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2346148,
+      "sha256": "81d472d46b68cd4e8f5ad49068948cb4136caa01a3cacb8e060f588e5ce2964b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00320/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2362405,
+      "sha256": "df1329424b8629016ed7b2a272da06d52a12bca5575c54958e27fd822e39c3e0"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00352/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2339266,
+      "sha256": "0abcc6d0544a38a540b6776d87fcb646c4bfe486916b83c5bf2fa2b45ec03a5b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00384/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2371981,
+      "sha256": "e407b9aa6496a01544aa589c81a4487dedf5c4bdc2d42c2251e4fe0a7287b05a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00416/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2363073,
+      "sha256": "4f0cf3361b293f5ebc8ad3c23dc6eb069a6f1148c963e2ce4087c22e4df2c438"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00448/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2333373,
+      "sha256": "8c666f3b5017d4fe1fc94691d61350f802e9830b92f515347dec3eeac44a3e12"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00480/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2373238,
+      "sha256": "419b830421fc67e437079850c6fbe9316cba4f8e510479059dfc42e4fb2b2316"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00512/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2302220,
+      "sha256": "1874165e1b3aa75e2ae5bec472c7a258c35d05fa19fca3cde252d796f34c203f"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00544/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2360491,
+      "sha256": "8c1200f7b5d60c3c8d978988f8700db185ea583b1120a192f4ecafa0629ecdce"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00576/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2362546,
+      "sha256": "621abd9fac7e7fd922976c22258a8edb1f87f671f25fb82715a8b0e4c5913671"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00608/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2367565,
+      "sha256": "4814be5baa34a59d2188e9c39ec1677a0d6ff15417a46f85376b319c1cb04d20"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00640/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2359563,
+      "sha256": "a060a7ca65a2a631353cf30ad472d64c0b9d0ef8eff72edfe75f9c98a0a33ffd"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00672/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2331753,
+      "sha256": "902e6ba5c9cca688153b089dd77414c0c94a250f037ff7c1014774d79db845e9"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00704/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2322633,
+      "sha256": "126793ad09177848682ee18e537d0dd5fdeda27181b4d15fb383f9da5f9c44bf"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00736/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2334179,
+      "sha256": "b9c90c25afcd2887fade3f15437edfdb3a78e14845c26c2faeaeab58b1a85756"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00768/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2345376,
+      "sha256": "048dc74f86621fca9c82a4f2c92ecc47d00c7f500bf88c06c222f6ee33f7192b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00800/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2377390,
+      "sha256": "d607ee1aee8701d8aa331d4041608c855ba487862bf6b7fddef43aeda7d3abc8"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00832/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2346795,
+      "sha256": "043e99ca84e7d87c3a9342f8ab010cb699e53d272a007aeb53aa606df7386adc"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00864/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2334679,
+      "sha256": "60e93b58934a4f5bde4c2f956a4d61e7ad3b0a88e443225080abdde94d06011f"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00896/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2326529,
+      "sha256": "9cf31a3edddb6752f1c5eed0c570329f01e85700becfeb37d483ca21d00ff681"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00928/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2363417,
+      "sha256": "cdffe6f1e97804684d3538fd79e27f5756f301b1caee4c663c4ca7947ce79151"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00960/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2386906,
+      "sha256": "f9d969bc1f7af64b84d20acef13e9c4f9ab7b1be2ab2ba47450f00efec638c40"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/00992/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2341275,
+      "sha256": "2886dc2ae00946747627be904112b0e244e205976a543e454f8c28ad937db26c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01024/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2350324,
+      "sha256": "4c36f30f533d047a3369abdcafe2a8c4d0da7158560dc547050dcd50040b21f9"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01056/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2363648,
+      "sha256": "cf9e0d103bc5fcb8aa47fab0f7eb0bd593c681c9ceed748b29c6769ec75d4cb2"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01088/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2332886,
+      "sha256": "8e0ca4291700b4841d1eb524e5694c7a7479bfe0a41e55dea107b8b3e36c59a7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01120/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2348280,
+      "sha256": "05c69d15798e660f4cf5a4fdba5840b5ed68530e3179986e2a13c0749dd5343e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01152/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2339294,
+      "sha256": "3426ddd59e7de8cb0cf218342c937a86d6f638d057044d4b4e9247b3131f0a29"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01184/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2362212,
+      "sha256": "7c5ed78aa920480fc720337403463e3f0c7926f57ac546529d10d6dfb709bc5a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01216/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2323242,
+      "sha256": "735c728b3ca11f0974fbc8356a0fa46881e126e9eeec6701b3bb472dfc432a81"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01248/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2373086,
+      "sha256": "5f35d9d46152d8f2f6227607633d03ab4e7599e0ba60954826020800cc0b3f33"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01280/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2327703,
+      "sha256": "604aafb3c8fe53cd8cdf557160d250da8999f742f65135f39a7082e7783712b8"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01312/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2369396,
+      "sha256": "56e3d5a09451749d94ac55c286df8cea1f25532a7f9bf992e47f845f39b7fe6e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01344/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2325511,
+      "sha256": "855a1ac9f58a44eca0a9dd9792998246eee9dcf9d7daadd29d37e486b1550d4d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01376/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2336797,
+      "sha256": "9eea9b513985767550a339a0359a1ae5fa621202b5ad82654b45768e1d2e97d0"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01408/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2352844,
+      "sha256": "dc1338fb8522254793c273c1123c82397bfd5ebf27f568d2d6e090610d1e14d7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01440/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2348511,
+      "sha256": "97e8f05821e07dd7d638ec07150d97d070fa001820f787714a8ae77960b5bdb3"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01472/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2373816,
+      "sha256": "38479356b48d5a04ddb3f9deed8514e4f35de1969aebb420fa2c1ef35543d97d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01504/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2331684,
+      "sha256": "397d8978593bd5a703d5e49ef48b9b89d61900587e0936e3b389003df4b6c7b3"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01536/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2307540,
+      "sha256": "3a12f0b06b83f26d39a43aa4c2883cedb2b326406ee76250bce03e3bd0172ebb"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01568/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2358912,
+      "sha256": "7fc61600d007f7f44c85a902a89cc21d5ac0a3b31ef5797eda3b765e2a556ff4"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01600/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2334667,
+      "sha256": "c52d10cf019eb9ad776a8344539be9a4c641270148fd66432a237d850303b9e8"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01632/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2324146,
+      "sha256": "10cab7059ed4941c4636fa53dbfb28b9daec13c6d9acdb0fb1f8f9eda47f4765"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01664/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2327524,
+      "sha256": "2d43977289e25a3044c09deac76c2ccf9cb7074babad057c8b27330d9ab85992"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01696/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2356764,
+      "sha256": "b11afff70811e72d64b2ee681f584c3b113fa98cde798de027a6ac27b5fb5685"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01728/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2342938,
+      "sha256": "058960756635cc9b181a430afe864cbc658e5a8a8fff04bcd7ec2d4803f0d10c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01760/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2323296,
+      "sha256": "b34ada4620200dc273d86e548b8cc547000e19f0212e914054af74b049e85bcd"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01792/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2295954,
+      "sha256": "0e6f902dff41737731ae3cc4acec7c4f1f2e860d1e5d8b3e6e3620bc635e2300"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01824/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2349990,
+      "sha256": "332bccb625fab9d4fa2069735356fa6cb3330b3b490ef753ae2e2fa04e5040ad"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01856/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2334263,
+      "sha256": "e0e1d34288306e8fba63c1e769f34ff8bd78502faf845f5f15255c651637742f"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01888/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2365903,
+      "sha256": "138a5862c0087cda5fe78401de4293f6273b9b05b50460ce2dc23f196b6677f2"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01920/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2362836,
+      "sha256": "ef2551fd4b1763cc9fc737b587f995fe99c50905062f8fe358d03004aaf70c9c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01952/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2347738,
+      "sha256": "4deb50a6b747d68c74ba2576dc0d998fe3fc5ef43003911bdb99d4f4f2e134aa"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/01984/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2361407,
+      "sha256": "c7e506ce635633d3e3d56972f575595f92b282bad6c85d3f4df440a67faac1a5"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02016/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2338586,
+      "sha256": "d34e825c4fda706b0916af46184a6e7eb4f51ae75e26c806f945cbb4acc84839"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02048/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2360978,
+      "sha256": "00febe0f3ef44ffa5b6037799e74d98bc939cd7989a3f85e9e9808c47128d7cb"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02080/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2357522,
+      "sha256": "8a08b76bb556a74136ac6da0c41f2bbc361a18dbc40eee5daa7a0066c3252651"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02112/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2328179,
+      "sha256": "083a1fbefcc5ebb2da923186480eacdce0ad40bf002f8b399ba1baebde2f3425"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02144/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2339438,
+      "sha256": "ea143c5dda6aa56221f14bccb55a72222f0230c9f155af87ce91a42602ab2791"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02176/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2349235,
+      "sha256": "b3afc17a988f71c33fcf4bd84d170a02ab29dba6dae97a50266601a93e9bc742"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02208/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2314734,
+      "sha256": "e390a19f9e9049ceaf19fb9e5169b415c593f62c3b30b6b36eebd65f8c0fe58d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02240/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2362189,
+      "sha256": "5c2d7f54e005d91ad6c9a696e9b88b9cf94daa6d2300fe72c64a4d501de77f89"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02272/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2348577,
+      "sha256": "352ba412a17dbdfedf3a418871f893996b3ba8b4e5e57a2a3669a95dcdf68ad6"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02304/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2317264,
+      "sha256": "ba2ef0e7ac876b937d3d3d55ea7b036555b0292989dc240a528eabc22e4740fc"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02336/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2333967,
+      "sha256": "6ada146a7b4e971011ab95e7b9ea2e24149fa522f9a177177618cbf3f7e8634d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02368/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2329150,
+      "sha256": "e54bf185f23f6f074844af873148d3c761a14f69a709ef1d78895ae92f173797"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02400/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2350453,
+      "sha256": "2471f9a01cc80c0ed9a7f3eebd679ac54f83f01f97a65f6657bc30fc5f57c4c7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02432/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2332489,
+      "sha256": "824cf3abc45b2de99cb03ea77de2ce59ad0d6e4fab4a4f66c9f8a2efd938e3f5"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02464/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2353153,
+      "sha256": "8068eccd0d3a5e155fea8e85d54ac782d3abac84386082af5ec550e70e339e2e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02496/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2335027,
+      "sha256": "fd661fc6bd05f9bb831e206f62f3fbf457671d5e42b0c09e564557b42e95ee6e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02528/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2325344,
+      "sha256": "2cd58c74004be2c2ce8c34185ef15ec4d8d58342c58437841ccf56abd2a432f4"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02560/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2356668,
+      "sha256": "053446bcad3b366c9885f3a787984cca9ce639c861d6c171c342cc1e860f966b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02592/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2346780,
+      "sha256": "2c282da1795400a85dccdde5bc13cfc25b034d24a0597ec4f6b74616365ec899"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02624/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2364149,
+      "sha256": "9b70f480208f4655ae4012d7f0502ecb04c48486a258d6ef81318b3ab2d50951"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02656/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2332570,
+      "sha256": "f6e7106a3fdc977983fbf01fdd55c612d0f6c4e21f5124bc22ce702e3ff5e9bb"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02688/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2343531,
+      "sha256": "230c309029851f7a373d79f183d7c745f542a8deaa12b945c6581a00d2514e25"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02720/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2344940,
+      "sha256": "fadda786c9983aae970dd68032c4decc3d01fddbfb3c22cd9eae33afafc1b6e9"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02752/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2348048,
+      "sha256": "bf8fea07a27c6d1c728e17f1c1f564446bb80d2165d632520beb8ae05df5c97a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02784/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2308185,
+      "sha256": "7de0a7679ecf58168a6a84d6fffda6d30305b629f502e3b0e4dc39d91d433683"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02816/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2349202,
+      "sha256": "4d8254bcdc9f4fb97a5e3bf19c155d65c5abd8dba636862db26121ae49c29d32"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02848/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2365557,
+      "sha256": "ae6ad0be309e496bf12d61a1b4d2236e0b97bdc24c9caf9c0eac8afc0d71833b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02880/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2319215,
+      "sha256": "10bf719104e409c1eb2a46c21cc9c26bd29be0fb570b6c47a08f6f1a2eecae95"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02912/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2373851,
+      "sha256": "0b906aac0d3f1bbd7e5315a4de485c2e385ab1c1ca434672d3dd841a7f6ef71b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02944/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2361540,
+      "sha256": "bcbf7da22172c5abda4a786901beb66456293a691aabe074282d03a31e87405e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/02976/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2350024,
+      "sha256": "74eb0d23ff76e6433be8d5f6560eb10497ae6d4699cbfb41683585637dbb1311"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03008/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2332364,
+      "sha256": "6d94e1870c57765713d0360410683cdf55b6e1add6628e38ff7860b43568d3bc"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03040/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2336799,
+      "sha256": "728d7a9293ad484f8d4954760736c4b2c028a139ee16c790dd2dbb67defe688c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03072/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2358407,
+      "sha256": "bbff668abf214f1c587e2470be33f9272ce5705ae1e0a67359813cd537a1a2ac"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03104/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2321699,
+      "sha256": "823d0392ea9d36d9c2fb7868f516d6bcf4135e96b49209e98845a683dd36065d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03136/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2362766,
+      "sha256": "1543d59279b987eca57ec9cb80d7c3ebaf33dbc235cc9f965028a780c2f07e11"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03168/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2343968,
+      "sha256": "e5d85b6c03a17bee49c68900563bd5b87e3fbd313241f29b2cdd8307e1647dcd"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03200/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2398440,
+      "sha256": "a370ac337cc3599332fd34564cb3423567f4e8fbc0e874be960bf7b6fdf75ea9"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03232/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2355275,
+      "sha256": "2888b05c1fea2b933f5e57681efb3eec1656c378440bb2f46af74c30a1217402"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03264/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2357999,
+      "sha256": "4cd4ae76c94eae5de186a2b2256e053f271ab704c661456a264ac53897604af8"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03296/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2336672,
+      "sha256": "21cf4e2c9eeea7f9cfb2cebd9d2ae21c06c70942127c985fe32d7c331b449c58"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03328/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2327586,
+      "sha256": "6f782b3d325a769d9a2221530aecd8f9c2e5d8279e34f6653244149db5de81ab"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03360/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2358633,
+      "sha256": "5d684371fd156c10a43a24a833647cc349fc50c7c386c25db36a4b9a3da81954"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03392/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2352293,
+      "sha256": "ac53f2489edc71a8278d223ed07f0a9fd282b3165ae3c29b83cac4d4b8d9fc4a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03424/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2304172,
+      "sha256": "ebc11f4502c948f1dc28ec9d49c77ac8df8a71b3759dbf688255f609fa5ebab0"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03456/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2338004,
+      "sha256": "7e31fa064b4c95dec92e78354c23dcf4916c885bad186f1425e847833bd39f8e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03488/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2337095,
+      "sha256": "44d8dbbcba90652a12bec284fb33c630f2375ffc85d667db22d0e6f64ee43b72"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03520/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2349161,
+      "sha256": "c3675304c2aa22d2067fead7c8717834180873c6077b08b47035460b57e616c9"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03552/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2349871,
+      "sha256": "d2ac418aa3b92051d93b876133fa086861da05205b0a748ffef89490620989dc"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03584/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2350135,
+      "sha256": "2bad1a04b937f03029c2059a5babe9ed39c1f7509bc1c27df6e4466d3e749d91"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03616/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2354991,
+      "sha256": "42939647775a850652018e13b6d74b6b103716d27277aa278306fe01f96c601b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03648/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2342696,
+      "sha256": "50e78b601929f7e555344d02bfba6b6211dcbd7e923475cdd3039a6c45c43a22"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03680/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2378123,
+      "sha256": "15e8738c52d6a3860082a0202f82259fd61c64a8e9e5f7120be0ca4c1396f8ef"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03712/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2353504,
+      "sha256": "a6dc49222ebf90e4779203f5e6e34abc078404ba220d6e1249737842967df8bf"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03744/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2347975,
+      "sha256": "3d7307f6dc6ad6068f8ee4a868937ce9cf4d0ca2867b6ac1861b4566152bbd2a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03776/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2364339,
+      "sha256": "5730ab966d130d51c78ddccff0a44df25d0aaa7538d87cc5a4dbd3694f9916f2"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03808/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2346659,
+      "sha256": "22af4eb01afcb36061aa0d44fd06b1a5a68ca4db72cbfdd9accdd5b3e27475bf"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03840/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2374774,
+      "sha256": "d353e5ecdb9be71d3e163a834ea755e4b8536d3fbe4c1c20c30f75d79796b812"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03872/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2367145,
+      "sha256": "8bb94dc9d7d84c75a70dec19814f05126d44d7bdbdb6b0982b264e32362e3bdc"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03904/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2341815,
+      "sha256": "5fb561dee3c6b01d1cdc2250cabb9cb78f17d9bb60ee5c25f17fbc9dfd528211"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03936/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2343367,
+      "sha256": "4b6358727fb7850f45a94d60f378a85dae1f26df5650e3952a52c41e1de52424"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/03968/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2344973,
+      "sha256": "6db0eecf28517ae98ad7c03ebce2e50e26e37db4165119e271da61a0de51fbf7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04000/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2305249,
+      "sha256": "f282f695a601fcbc6f91fac59ddba26a52481e8be9e44c31e12bfee8f6e247c4"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04032/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2315307,
+      "sha256": "b9b09aba2e990bb645d8ef7be54c7f09244c813e36e83cf948ae4338fff33e2a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04064/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2358806,
+      "sha256": "1ace8c885f4f7e17dc8c1a150df3ce94a325d742f66a66db613d3b6df23c58b7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04096/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2352558,
+      "sha256": "d6b59fac3fc66e3baab582b0666ef92f5a9b192a8f8acdea32c6cde9e47628b1"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04128/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2367543,
+      "sha256": "e85c768c9b4753f2a6ac175f479bc98a68b0d7b7e370ac2068a6f95dcd6b084e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04160/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2340454,
+      "sha256": "0bdfb0005ad335c5a02e65b22f7ba246fde2e3c5b88c9571f9d3e69c8d9b3f5b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04192/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2335880,
+      "sha256": "10a20b6d2e851d3f86ed9fbf2f36ef1ca7b985dee1e7bd5513531c4905eb6167"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04224/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2351977,
+      "sha256": "19b14230d4b35ad6a554d17567c251a9b9b7d5f7e7ce296244c345010792288a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04256/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2362012,
+      "sha256": "b2f37f69534a612560be86476baf9c7dd8b5d7ba51949804b12e455a1cb2b3c1"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04288/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2382402,
+      "sha256": "90e153987aaab41f35291277538513ccd93f07b704351f7d5a31dfa08ea2be2d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04320/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2363942,
+      "sha256": "fc25fb7e09ac4fe02528e3f53fcc935ed034a6c25250fe6f2c549284a8bbb5a6"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04352/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2349625,
+      "sha256": "8c887567e0ee521f2222f066d28e4fa9a4bf97ab195a7ec9bd87a95d6d16d380"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04384/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2320853,
+      "sha256": "ddd39378d4d8ef2b8a69aa06b24e07e379ae85be0b39b899a9bfafe10998d8a2"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04416/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2340315,
+      "sha256": "395ded7d6d4c691f2501a45b9e334807b493a93abbbbc3b6e88d4b43b44da478"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04448/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2311019,
+      "sha256": "38f7b2e36172696e171399f9171ae1d5135325dbed80239ba2cdb3180773a227"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04480/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2345335,
+      "sha256": "296d2eaf3bd9c3e5ae314ece1c1839fb31b9fa5d275e5090d7d81cf4e451e238"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04512/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2343536,
+      "sha256": "1847505ad3b1961b389afe9741e437475eb695c9d461d4d216f243dc9c439a23"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04544/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2364866,
+      "sha256": "3a43b1c23b7b24ccc60efe5e8860c7f70420be9f250f158a903ec99676685075"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04576/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2345999,
+      "sha256": "e389cfc4ec8d0b46b6400d032f8331bc4f1cf92d89e7e8a8e14916e37e2377f7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04608/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2383009,
+      "sha256": "891f41a1f335f517e02ce8797285c20346f29b9cf23fdc2cec9e314c396f089e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04640/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2341939,
+      "sha256": "6edc1eb6f300f1be124826bc9c7cea6a9f803fa0a80490b2025befbefb2bc5d0"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04672/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2406952,
+      "sha256": "1e090de6c3a3df8d15edaebb1664c310b187265837231f6f56c854477d1a45db"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04704/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2349807,
+      "sha256": "3bb7889acfdf15ae3eb43dd29e6fc5674ad085e3f13c4329f3ee338581161ab2"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04736/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2332559,
+      "sha256": "696d683c70c650e249c0456d40fd1f17d76f257a749a066e4bedc4d0fd17692d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04768/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2333368,
+      "sha256": "d4bd2ba05b1bd5ce8b606b476c0229e3a6af45ed1149d082be818084b6b8c6fd"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04800/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2344872,
+      "sha256": "409bf06ac9f8483e21b950fb7e92f411b8597a334a385c77b237f90acb02ad9d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04832/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2332173,
+      "sha256": "348826e42e8e2c60cb2e57c2821bffecffe25bcf28143a1c6b64f71b3a81eed0"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04864/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2358750,
+      "sha256": "e479e3c790e67163947889b98574cbcae9bd31ba277974b47c1ac8a254bcd02c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04896/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2333852,
+      "sha256": "f37acf2342e523b5ee09e3b998fc02554f6300cce739cede0649380efc099ea1"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04928/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2363839,
+      "sha256": "7e3b77c451b3c11578984ec19f3eff66fa3db375d2271348746fa42b61d8df7c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04960/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2442217,
+      "sha256": "c847b4919df0236b150823e11474f0c2ed62dd6e003a81c99e8e1504b991319e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/04992/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2402813,
+      "sha256": "e801009a81f8db18fab7712583302639074cfd9dde9a56d32a2a771b175a221c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05024/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2462657,
+      "sha256": "ffa5e9ea3267248ddab39afe48a0f1a97ff9a0cbd3226ccb7462c63dad7fc7a0"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05056/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2481488,
+      "sha256": "feaba6fa389e2882b881a929c03e4ea55f979a9b8774c13a6d00a2b273d70ebb"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05088/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2422450,
+      "sha256": "b6f487369343efb17b9ccc6a20bf105ea600ea3f1714ca278f9ecf99d42f349d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05120/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2376050,
+      "sha256": "0f70793290579e8031324ad15e25812f443b2339f8df054a660e69275ee8a29b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05152/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2425704,
+      "sha256": "d2ffe6b14ab6d893f9199c4381edd6ff0aec3a2dc85334c102ca070d14b26eb3"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05184/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2360381,
+      "sha256": "5465b523074aa2885ce546ff7f01423b372bc01347e9e7ee4f1ea224bb5df957"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05216/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2325844,
+      "sha256": "13fb225caf2f582668ddec83c6b993ca24ddc22b2e6c274f4c1be7342793db43"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05248/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2333433,
+      "sha256": "a03eeb593ebb7249bc8e24d24be212ed4b46a935eeaef621bb3323a5a652b90b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05280/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2429904,
+      "sha256": "25a4d856207844dd9f3bc054be5559b3e0ab1d22bdc943d8f2a83f8a316fef50"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05312/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2443171,
+      "sha256": "c27ea124cd28aa2f45b3161f3a1b92b059bfd9491297164370b3decdbccee3dd"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05344/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2484340,
+      "sha256": "cf1de234d71cd712af765c2fe68ed3bdc03a176117d713ee2ffc67d43877e8f7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05376/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2440758,
+      "sha256": "4d4254826e25f77312ea1954f7374c2576a3379be409f3a357b3c405376513bf"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05408/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2583449,
+      "sha256": "568c6c7f3b4e6d3d93dc3d98d899ad11fb53e3cc977ed9f66c5fc0d7b8ecb852"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05440/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2470560,
+      "sha256": "c158e03c0c57277c7b654827911926323eb4081d1d53756a12463f3f07a6e609"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05472/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2356915,
+      "sha256": "86aa2c6c882ad46932f22f672a819d03cef7ce1acc2276b07006099e44a4ea6e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05504/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2353139,
+      "sha256": "548bf16d80ef8312a8aed7ae4b01775ca2218a4ac31793a96200db9c75edb17f"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05536/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2341182,
+      "sha256": "936704692a8ce1419afc9523a26a60c3e72a89e8777460ca817b8198b88528bd"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05568/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2349487,
+      "sha256": "de9f693861ab5806b6ccfc1f8af9e18d8b03afe569c29863f662f8acbd83591b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05600/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2375802,
+      "sha256": "06aac06a651c1e1accf3f4b98e490c729a55f0eb4f53925822f0ef3c6e3e4b8e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05632/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2482821,
+      "sha256": "523fd9aace99528e5bee8ab6d13af295a44631b10524e5382b0032a2b26edd6b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05664/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2504842,
+      "sha256": "2f7b44a2e63bec1aa9ae2285b807494e47da04b159c35fd3ee67686dc1c692d2"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05696/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2476024,
+      "sha256": "af29885c72fc60c95c20c8ea50474db17e4c150edf1721be47dc1579821355d4"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05728/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2385340,
+      "sha256": "015bfede765d38f0b4090c203342adc6765e3eeed5cba183b732d8dd3cad7f36"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05760/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2353663,
+      "sha256": "4ff76420c773e87270cd894cbc63941a9697acdcde6cb5839e0b6648bcec6083"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05792/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2527636,
+      "sha256": "886c35aba34516c51bcb88c2558ac99d0560c438147b60626e20b497fa2bb75d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05824/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2499672,
+      "sha256": "ee6cc03c0ebaf632e4f469f045903dea0adf356f3d32ff503dbfc9fae7cff4ce"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05856/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2368323,
+      "sha256": "cc0c43f18a23cd0ff41a66c319c4b17c48f97caf3959f7b54db444fef5af48f9"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05888/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2352461,
+      "sha256": "f1b923412ce1e8ad431a54be3eb0ad92dcddcceccfe5d5b6d22b36762d0899bd"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05920/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2366677,
+      "sha256": "3b03d478ad1a2d9689ddf6346ee8fc11a2fa6f6bd0b05177e2ce019deee6b8a7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05952/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2323171,
+      "sha256": "c2a4ad44c83c5c4f98957b8dcfa6c1381f29d96bece873c16f7a1869703f549f"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/05984/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2333295,
+      "sha256": "75e468aeb1c25aad2a24a8f1298aff486e362d5325686f0695f0445f01479325"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06016/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2368448,
+      "sha256": "4ffbe0ea32c0f3e80458dc7e7e2fd3cd3968c55e355628a092e1f700edce4011"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06048/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2350891,
+      "sha256": "ddff4242d936de9a08ec976c19086f9c5aaf5087593407bef5018faf29b27178"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06080/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2359810,
+      "sha256": "173b48383d8123ca12afd0530f26942facb72f31dcc444de412326d6ccb043ae"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06112/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2350485,
+      "sha256": "b57e05599486bae175d2cd31a75d85526d98431e113783cf9cd8eff000005974"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06144/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2377305,
+      "sha256": "894abd1cd145d9cebb02b84cdc5f15d61e1e869cde69b2fc2e51411f2e9bc6cd"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06176/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2422324,
+      "sha256": "514c79466a357b21accd1dd4e10f3b78ec19a961a97874ab70813517dea4ac7b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06208/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2388850,
+      "sha256": "44976dba2d59955cf69b0c4db30631be22ed2ef825ec603c48f0704fdc9b2a81"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06240/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2342733,
+      "sha256": "32acb86b81cb39bb1a7eb599c9237592819e38da47e2c8e40f90aff4a59510fc"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06272/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2348744,
+      "sha256": "53a27f4c78463ee09960cf7b659fc4896eee392f6dd2d14555b85bb9c4fdcf15"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06304/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2390037,
+      "sha256": "7fbbfaf02ec17a17b4c0bbb25a447b32b87b3fcedccff09d812c39e336132222"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06336/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2375519,
+      "sha256": "9ece464767a765af396f3f50b0f6c364853fcb339740b6e58edce981ab3d2ca1"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06368/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2443008,
+      "sha256": "08dd8fc98f7ab7252addb84420401fc4722f3d1dfae46eea7b52f77e0ffbb0c3"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06400/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2396481,
+      "sha256": "81b2bf708fbb8ccafdf8819485ca31a588ef2d8e1880e471d105273663101b9f"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06432/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2350830,
+      "sha256": "99338aa012a57c6a911c9de8f65d0c740650900c4e3aaab9de636fbce8fe38fb"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06464/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2353736,
+      "sha256": "c54e330d672f06811748cbf47218091f6131571a3697c564205a743d50477066"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06496/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2372204,
+      "sha256": "790a8544e1811872f381f3af681451b034aa93f5da0eb6bf0e2f4dd16b7274f7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06528/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2370464,
+      "sha256": "f664e8d27140a97639050c6872339f9c7b95956f36ba8990f2e7bdd7d67fcbdc"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06560/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2373689,
+      "sha256": "d3d144934aedb7ce3c6f353ba15b3bc782fa3698ded909f2e349b994a5ba9934"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06592/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2404883,
+      "sha256": "5c727fa95e0b8d8dc0eac9b8ff14737275e57cb56fe99db216d50da17c5c3a66"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06624/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2361813,
+      "sha256": "7ffed904a47eee9591feaacceefe69227eea8fe18cb9d3b55f1e37e528b54765"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06656/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2422631,
+      "sha256": "48a9734ea75eadee1f104244552f8b3dbdbfebb14cea5a95bc0485ab1c553ec8"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06688/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2474317,
+      "sha256": "e948ed07bc02df9c8e6a91faae9a9a7a8a337c651947a3d388076644a366b368"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06720/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2398034,
+      "sha256": "e0ee2f88d0bd22f0a10d263fa1dd8f9fd226870b17da9b251f14c04b2e74738d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06752/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2439280,
+      "sha256": "528e455cf7af816f5d655f209b743b9dc7ecc3336e9aeaed51e759c27656197f"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06784/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2383806,
+      "sha256": "c834bdab88455cb6c39ee80e895f2314ea6e65ec2df4888e42ea00c8778057e2"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06816/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2426769,
+      "sha256": "6f64edcee407ad53439f92653a4c9ede63e492e404fbc65b5e290d7ab92ff303"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06848/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2374209,
+      "sha256": "25f79e0b2acf14667f710d0127c3af911c1c4383fd87d5b0f1ee9f042ff6796b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06880/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2334073,
+      "sha256": "4121bb4a4286163268c88a0f7cfa3a15ecbb544ba7e1b39b60baafd5daf1c6e6"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06912/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2312639,
+      "sha256": "f7866c9b1475f15d0b44a9d25e251143d41be7d989fdd4a4a94f4b74953718ab"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06944/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2335118,
+      "sha256": "bacb4ae365ee19906d7b890f625eec83d2bc387b46522d81580df60ea7b9a497"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/06976/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2361387,
+      "sha256": "660f80612c8fc9dd711a987b65840bba7c63246f50d4a627db8567c5faff8512"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07008/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2345950,
+      "sha256": "c30a868aec9e25a75e34660f8b37a2f5a5c1a62df2485f446da1987178fc452a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07040/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2322190,
+      "sha256": "52e0ee9a7ce79abfc5bdfe9192693bb990f7aeadbafcef509fd1e9558db79f6e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07072/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2330459,
+      "sha256": "072a3d5360393e538a9f8bb9c556b8ad33b510043fa86cc3455e404d26ddf240"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07104/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2361406,
+      "sha256": "5e7720d02d506cac98ef4e9b218774d4e159df8248230f66af66805b8adf96e1"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07136/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2383054,
+      "sha256": "aecc39429f1828f4fb55fa87c52d64f3d27dcaf48112f8730e3d1285bbd372ce"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07168/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2255337,
+      "sha256": "9a55a980a8ea6d847a9400659a10235f052f615ef108277b4c09d476ecdee66d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07200/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2315292,
+      "sha256": "4a74e1fec0fa4355fad19d7b5b0484c69f7f916eb334f1944f2b8909954f21ad"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07232/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2315063,
+      "sha256": "7f21b5ea645a902fac09f029a1070ed1e6c1036c0e4d875fee9a02700a7b49b2"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07264/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2330918,
+      "sha256": "7c354e0645413d996bb9a0aacdf97cc39bc7d9fa161f84a9aa41dad58ad0401d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07296/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2319204,
+      "sha256": "6b009b0bfe7ceb4344e922c498d865fa26f31a495afdf8330eaf8259dacb85b4"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07328/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2270718,
+      "sha256": "25f7fdd2c142330267e72878b007350a04020dc752b21aef244ef8b2edf3e77f"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07360/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2352657,
+      "sha256": "e74fbcd4ef2304e7dca2311a1270fc1ecfac5e36dd600724fc9d3c126d1469de"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07392/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2366534,
+      "sha256": "42218ca66d61d78e333d8093bd1279c5cbbdb32c348040181b4502a290c171a4"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07424/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2343528,
+      "sha256": "a91fce10411a822dd720a5aac2715042d155f0f090f31be2c5c67a0106435028"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07456/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2318557,
+      "sha256": "ac7f30519790c122e20ea09b53ee6b51fb2c2a2ad80be348025c48b8b6a1ba1a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07488/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2335286,
+      "sha256": "64ea52968ab46763497b31aacb6b33c06e52d014594a7add815311c03c046884"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07520/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2339549,
+      "sha256": "ced9f223350d79f64ec4d4a9c0f830de7881921e6a1b42bb51e28aff442a5dd1"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07552/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2359418,
+      "sha256": "bfd1f439c98e4f725fae3593a7df2e713033428b989c5a0860628fdc4e53188a"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07584/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2355116,
+      "sha256": "d13bd44c9e699d26a41b0c21a9887dc3efe07b56621cd86b7e49febdc2338381"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07616/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2282266,
+      "sha256": "033efb4c416ac1a08f1c8f0d69acd81bf590d346fbce67fd4dfb2ff571537921"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07648/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2319845,
+      "sha256": "45d6ca29c3b38f97c05497915fa20425d59b3b947a85f300ab22de6c7859340e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07680/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2296866,
+      "sha256": "8216a9ef8ebc01025c0e2db123d67966cbd24945821823521cdf9976b934f8f7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07712/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2374523,
+      "sha256": "8aab35fc872edc74bccc838384b15e37d7ad54c948514f6e1989f5b1a5cb2dd8"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07744/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2370918,
+      "sha256": "b3da0ad4262fd10e513cfb7edbd07b0a2d15273ead9f6d7ddc583b2565b398f8"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07776/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2292507,
+      "sha256": "c570c813da80c032312c215df6afb13e8936d70ab61d03486bdfb0034ef14837"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07808/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2342891,
+      "sha256": "b50c42c5612a618b876f05327944853f74b94581672935f50f112861bb7e2508"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07840/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2327540,
+      "sha256": "3b48392ba4391954c9cb835191c383e41aeb8c1f1a07dcf648883c33638be93f"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07872/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2305208,
+      "sha256": "a0a5942fb34451bb47f499e831e4267243cacfe40756262163e05125b127d537"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07904/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2381561,
+      "sha256": "75a07643415ed36b2f51da1492a58414006931725312310cc246a53d205afd50"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07936/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2427564,
+      "sha256": "50e99c37a40c98c2f1889c4fad048ff43393f4386ec7b14cf16e8a724a1ed968"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/07968/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2384530,
+      "sha256": "57b895e485585a23ab34bf4c4d4f6abec992bf757a288c36c4b6bb3ba2874235"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08000/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2444453,
+      "sha256": "07a62ef8e41ea5076c9ed56a6844e44559b5585f4075e33bfc8252658897e8c3"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08032/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2402321,
+      "sha256": "689d72ac497c63433c645d3360a167ca1cf31c3cae6d19e4f58070afe410faf7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08064/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2406040,
+      "sha256": "be78214dafecd7936e36a0d00dbb72236db8372b827d34ad77f3821bf95d2e21"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08096/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2407993,
+      "sha256": "288f2caf348d8293cd81b14b8cb189d498fdeac73de9763b808f1913fad96e06"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08128/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2488233,
+      "sha256": "4135f00e39d3d39026888609ce1be11fdf10efc9d9d4cdf5328c9999130a3592"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08160/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2378385,
+      "sha256": "a78f2e2b36073265943df1683b089f3bfd949ce09763abc9ce742591dd42f753"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08192/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2296055,
+      "sha256": "3f0ad20504422d03e7729d84a4c6a842cc8ff00347f5f05fbf7af88c80aa6921"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08224/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2392374,
+      "sha256": "b1fcb42d32d9e5439ac975509e1e944da12c652b698e30f40b30aac6619f0477"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08256/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2342923,
+      "sha256": "d1821fe8d59054233a9c37c5f17a9d0732186f40971fb85d1be925701b9300c4"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08288/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2348376,
+      "sha256": "41d68abb463f86b37e5e518f2c724dab143f4f50da06619eb97e8af3d6e09f73"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08320/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2358398,
+      "sha256": "e2032da5463ac05d7413a8108636a31f960b93a9e5234532839913a584e5f3e4"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08352/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2332759,
+      "sha256": "971359a35edbe5168af0d843c8fc3fdff1965b64a7ad36ea5db0fddfc281d677"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08384/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2389190,
+      "sha256": "bd3b5d0f727f9c2062745b1587cd7d3040fa90155aa5e565494afd2505246978"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08416/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2409389,
+      "sha256": "6e0e3b90851a31612b9ab2dc600181eda1190b4f2fb32e50adcf5fffe9cbf8ae"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08448/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2366236,
+      "sha256": "09fecb695ba4ebb3c4d38103880ba307bfcd8e846d79a3f58302433cd20b0199"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08480/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2380035,
+      "sha256": "2496a2c09e6e61faa8d908ec18f8d1182bdb749d2b1a39776729771fe86ef72e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08512/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2348580,
+      "sha256": "3792b384652b35c927cbcee1536f6f4ee22b744759e35dfb0918b8b8f88db050"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08544/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2423262,
+      "sha256": "290cec832c37b67b726ea7014e1de923713402910553790a7271466edbf3e0a1"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08576/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2353785,
+      "sha256": "e66a0ba9554579ee0a3be072563b3f93bedc7caeaa26861574bad619e77189d3"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08608/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2395625,
+      "sha256": "b075f21f6704034d151497e49157bac52d03d9bf3eff4ed8e06f8768c57a593b"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08640/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2380216,
+      "sha256": "12278abb3ebf1a6769cf8eb03ab38da33401051d424c8cd5bfdbc9ee74d6be55"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08672/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2394571,
+      "sha256": "8485ea1c519b5b063809be00e8be2bca2ecbd74bbf458b9f78678c90be9aaa1e"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08704/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2367920,
+      "sha256": "b8961a0a82e852c8d3ecb51050eba958937fe7049479cdbb90eeb8dc7baa4f9c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08736/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2388485,
+      "sha256": "7c92a853fb9a938949df3d9c55bc6f8ceef1e61497dba6a6d3576a8917a386cf"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08768/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2361550,
+      "sha256": "224df8aa86fbd4fbc57c4764d146b13030abe08fd4170649dc4db411310e2464"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08800/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2345013,
+      "sha256": "d562b1888c61e481ad4a2cbf845803c8a7432cfa17719c1f1c70162acd0e90a2"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08832/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2360195,
+      "sha256": "04a7088748cbd9bf909d56c13699918b8126dc3099afbf838aa46dde43fc667c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08864/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2292516,
+      "sha256": "143f92e06540d1f1daf2d7a8484b16e543ebf180af6822d53b1dc9490dad2918"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08896/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2361546,
+      "sha256": "9d34c24959c5bc673e1b4c23fd5e50e9c9bcaa04ed30eb79e056bcd688872829"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08928/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2317374,
+      "sha256": "76fddd8d59259d6b861d89f29db9980d6effec69598e95166568f5cdc4a68f21"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08960/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2378133,
+      "sha256": "73426b5907223b0cb95487b8163e8e997ba2471f0646fcd99a101622a6a0d1fe"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/08992/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2348557,
+      "sha256": "7d56f3567489a59f530eda9266df0bf95589ec866414f1c11454ade4b84933ae"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/09024/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2386274,
+      "sha256": "5e0373f4009644ace469c69235772179754ac4d709f7d0906da5fe839fae12b7"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/09056/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2379782,
+      "sha256": "d1014bd81c0433c0f67f8d6c8e1063d7fc69d525dfa66b00eeb6b968d415efcb"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/paired_evaluation/chunks/09088/attempt_00/regions.csv.gz",
+      "role": "R0 geometry-only recovery: max_iou_gt and candidate identity",
+      "bytes": 2259928,
+      "sha256": "02b8cd74c8917a1ffec1d13a2b34272061a746bd286d35656bef8085928e9c63"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R1/formal_20261112/l2_L6_mask0/evaluation/summary.json",
+      "role": "R1 exact run config and original group counts",
+      "bytes": 211224,
+      "sha256": "144a85cadf33d9c367af50a29d68c89c895a31f146ca79f7e4ba2e6b5c68577c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R1/formal_20261112/configs/l2_L6_mask0.json",
+      "role": "R1 formal configuration",
+      "bytes": 1229,
+      "sha256": "cff36eb3792847a092aadd36272d77702e47ca41fade5bdc6fcb0d82f64a78b1"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R1/formal_20261112/l2_L6_mask0/evaluation/queries.csv.gz",
+      "role": "R1 formal all-query full_error, IoU, nearest GT and Gaussian",
+      "bytes": 52305543,
+      "sha256": "0e97b004847fe813ae0148cd3f3bf86aeb9937996af6a51d42d145cd20d76962"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R1/formal_20261112/evaluation_cache/manifest.json",
+      "role": "R1 box-cache provenance",
+      "bytes": 154920,
+      "sha256": "fd04d707fcce4d3e410b6a86fd6dcd4731d93a93b65d67232106d149305fdf2c"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R1/formal_20261112/evaluation_cache/index.jsonl",
+      "role": "R1 existing cache index",
+      "bytes": 1171641,
+      "sha256": "76045097e3cbaec8745adaa00cc8a5de1200177db5f1b4d7eeed1de78c3be57d"
+    },
+    {
+      "path": "/root/autodl-tmp/experiments/R0/analysis/grouping_audit.json",
+      "role": "Original R0 disjoint_gt Query counts",
+      "bytes": 1344,
+      "sha256": "0c473ad91cedb4432f51bba488b74a29c2591ea152d8b520706bb623e2c08d0d"
+    }
+  ],
+  "r0_indices": {
+    "source": 1,
+    "method": 0,
+    "level": 4
+  },
+  "r0_counts": {
+    "known": 140527,
+    "unknown": 21382,
+    "background": 287554,
+    "ambiguous": 462437,
+    "invalid": 0
+  },
+  "r1_counts": {
+    "known": 140527,
+    "unknown": 21382,
+    "background": 287554,
+    "ambiguous": 462437,
+    "invalid": 0
+  },
+  "original_r0_counts": {
+    "known": 140527,
+    "unknown": 21382,
+    "background": 287554,
+    "ambiguous": 462437,
+    "invalid": 0
+  },
+  "original_r1_counts": {
+    "ambiguous": 462437,
+    "known": 140527,
+    "background": 287554,
+    "unknown": 21382
+  },
+  "query_total": 911900,
+  "images": 9119,
+  "all_query_per_image": 100,
+  "r0_r1_clipped_boxes_exact_equal": true,
+  "r0_r1_groups_exact_equal": true,
+  "r0_r1_max_iou_exact_equal": true,
+  "gaussian_max_abs_r0_r1": 0.0,
+  "ambiguous_high_iou_difficult": 5639,
+  "ambiguous_high_iou_other_reason": 0,
+  "excluded_missing_error": 0,
+  "inference_performed": false,
+  "training_performed": false,
+  "geometry_recovery_note": "Only max_iou_gt/key/group read from original R0 candidate cache. All R0 errors exclusively second-round S2 trained73 overall.",
+  "seconds": 72.42230725288391
+}
