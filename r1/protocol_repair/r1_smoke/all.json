@@ -1,0 +1,28 @@
+{
+  "scope": "CPU synthetic only",
+  "stages": {
+    "common": {
+      "passed": true,
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 0.856147289276123
+    },
+    "r1-0": {
+      "passed": true,
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 2.608715534210205
+    },
+    "r1-1": {
+      "passed": true,
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 0.09073925018310547
+    }
+  },
+  "cuda_initialized": false,
+  "torch_threads": 1
+}

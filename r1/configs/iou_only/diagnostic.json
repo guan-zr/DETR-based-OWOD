@@ -1,0 +1,40 @@
+{
+  "task": 1,
+  "data_root": "/root/autodl-tmp/datasets/OWOD_B0",
+  "train_split": "owod_t1_train",
+  "eval_split": "owod_all_task_test",
+  "baseline_checkpoint": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/checkpoints/task1/checkpoint0040.pth",
+  "b0_status": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/reports/train_status.json",
+  "b0_analysis_summary": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/query_analysis/final/summary.json",
+  "b0_pipeline_pid": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/pipeline.pid",
+  "b0_pipeline_log": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/logs/pipeline.log",
+  "resize": {
+    "short_side": 800,
+    "max_size": 1333
+  },
+  "name": "R1-iou-only",
+  "representation": "l2",
+  "layer": 1,
+  "mask_ratio": 0.6,
+  "autoencoder": {
+    "hidden": 128,
+    "bottleneck": 32
+  },
+  "optimizer": {
+    "lr": 0.0001,
+    "weight_decay": 0.0001
+  },
+  "steps": 2000,
+  "batch_size": 1,
+  "extract_batch_size": 1,
+  "seed": 91,
+  "max_cache_gib": 12,
+  "output": "/root/autodl-tmp/experiments/R1/L1_iou_only",
+  "evaluation": {
+    "positive_iou": 0.5,
+    "background_iou": 0.1,
+    "low_objectness_threshold": 0.5,
+    "repeats": 4,
+    "background_rule": "iou_only"
+  }
+}

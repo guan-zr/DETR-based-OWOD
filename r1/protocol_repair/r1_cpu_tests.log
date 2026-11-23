@@ -1,0 +1,28 @@
+test_actual_official_postprocess_mapping_on_cpu (test_common.CommonTests) ... ok
+test_exact_layers_features_boxes_and_pre_layernorm (test_common.CommonTests) ... ok
+test_frozen_outputs_and_buffers_unchanged (test_common.CommonTests) ... ok
+test_missing_own_layer_outputs_raise (test_common.CommonTests) ... ok
+test_streamed_save_load_and_corrupt_query_id_rejected (test_common.CommonTests) ... ok
+test_grouping_excludes_unknown_and_difficult_from_background (test_diagnostic.DiagnosticTests) ... ok
+test_metrics_diagnostic_and_case_export_and_plot (test_diagnostic.DiagnosticTests) ... ok
+test_all_current_configs_batch_one_and_raw_pairs (test_protocol_repair.ProtocolRepairTests) ... ok
+test_duplicate_index_missing_file_and_manifest_id_set_rejected (test_protocol_repair.ProtocolRepairTests) ... ok
+test_formal_baseline_checksum_mismatch_rejected (test_protocol_repair.ProtocolRepairTests) ... ok
+test_frame_image_id_layer_and_real_padding_mismatch_rejected (test_protocol_repair.ProtocolRepairTests) ... ok
+test_incomplete_writer_and_entrypoints_fail_before_evaluation_or_checkpoint (test_protocol_repair.ProtocolRepairTests) ... ok
+test_low_iou_containment_is_ambiguous_at_every_saved_layer (test_protocol_repair.ProtocolRepairTests) ... ok
+test_missing_legacy_provenance_rejected (test_protocol_repair.ProtocolRepairTests) ... ok
+test_valid_cache_unique_split_ids_and_raw_l2_reuse (test_protocol_repair.ProtocolRepairTests) ... ok
+test_wrong_actual_id_set_even_with_consistent_count_rejected (test_protocol_repair.ProtocolRepairTests) ... ok
+test_wrong_batch_resize_and_source_hash_rejected (test_protocol_repair.ProtocolRepairTests) ... ok
+test_wrong_split_hash_and_same_set_changed_bytes_rejected (test_protocol_repair.ProtocolRepairTests) ... ok
+test_wrong_split_name_and_synthetic_scope_rejected (test_protocol_repair.ProtocolRepairTests) ... ok
+test_gradients_only_update_shared_ae (test_reconstruction.ReconstructionTests) ... ok
+test_masks_zeros_mse_and_reproducibility (test_reconstruction.ReconstructionTests) ... ok
+test_real_config_capacity_batch_query_shapes_and_layer_fairness (test_reconstruction.ReconstructionTests) ... ok
+test_reconstruction_evaluation_needs_no_diagnostic_results (test_reconstruction.ReconstructionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 2.518s
+
+OK

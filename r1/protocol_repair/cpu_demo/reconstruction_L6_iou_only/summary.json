@@ -1,0 +1,1117 @@
+{
+  "background_rule": "iou_only",
+  "grouping_audit": {
+    "L6_all": {
+      "before_iou_only": {
+        "known": 2,
+        "unknown": 2,
+        "background": 10,
+        "ambiguous": 0,
+        "invalid": 0
+      },
+      "after_disjoint_gt": {
+        "known": 2,
+        "unknown": 2,
+        "background": 10,
+        "ambiguous": 0,
+        "invalid": 0
+      },
+      "delta": {
+        "known": 0,
+        "unknown": 0,
+        "background": 0,
+        "ambiguous": 0,
+        "invalid": 0
+      },
+      "transitions": {
+        "known->known": 2,
+        "unknown->unknown": 2,
+        "background->background": 10
+      }
+    },
+    "L6_selected": {
+      "before_iou_only": {
+        "known": 2,
+        "unknown": 2,
+        "background": 10,
+        "ambiguous": 0,
+        "invalid": 0
+      },
+      "after_disjoint_gt": {
+        "known": 2,
+        "unknown": 2,
+        "background": 10,
+        "ambiguous": 0,
+        "invalid": 0
+      },
+      "delta": {
+        "known": 0,
+        "unknown": 0,
+        "background": 0,
+        "ambiguous": 0,
+        "invalid": 0
+      },
+      "transitions": {
+        "known->known": 2,
+        "unknown->unknown": 2,
+        "background->background": 10
+      }
+    }
+  },
+  "scope": "synthetic_CPU_diagnostic",
+  "images": 2,
+  "statistics": {
+    "6": {
+      "all": {
+        "counts": {
+          "known": 2,
+          "unknown": 2,
+          "background": 10
+        },
+        "scores": {
+          "classifier_unknown": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 0.7006493806838989,
+                "quantiles_05_50_95": [
+                  0.7006493806838989,
+                  0.7006493806838989,
+                  0.7006493806838989
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 0.6946473717689514,
+                "quantiles_05_50_95": [
+                  0.6946473717689514,
+                  0.6946473717689514,
+                  0.6946473717689514
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 0.6443912506103515,
+                "quantiles_05_50_95": [
+                  0.5326096415519714,
+                  0.666526198387146,
+                  0.6840052008628845
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 1.0,
+                  "auprc_average_precision": 1.0,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 1.0,
+                  "auprc_average_precision": 1.0,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            }
+          },
+          "full_error": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 0.16374757885932922,
+                "quantiles_05_50_95": [
+                  0.16339328587055207,
+                  0.16374757885932922,
+                  0.16410187184810637
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 0.18671397119760513,
+                "quantiles_05_50_95": [
+                  0.18659282252192497,
+                  0.18671397119760513,
+                  0.1868351198732853
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 0.19421148300170898,
+                "quantiles_05_50_95": [
+                  0.14478226006031036,
+                  0.19943500310182571,
+                  0.21603132411837578
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.19999999999999996,
+                  "auprc_average_precision": 0.15555555555555556,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.19999999999999996,
+                  "auprc_average_precision": 0.15555555555555556,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              },
+              "lower": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.8,
+                  "auprc_average_precision": 0.41666666666666663,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.8,
+                  "auprc_average_precision": 0.41666666666666663,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            },
+            "direction_status": "Both directions are post-hoc offline diagnostics; no direction selected or calibrated"
+          },
+          "gaussian_objectness": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 0.27255138754844666,
+                "quantiles_05_50_95": [
+                  0.27255138754844666,
+                  0.27255138754844666,
+                  0.27255138754844666
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 0.2725445032119751,
+                "quantiles_05_50_95": [
+                  0.2725445032119751,
+                  0.2725445032119751,
+                  0.2725445032119751
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 0.27254490852355956,
+                "quantiles_05_50_95": [
+                  0.2725428640842438,
+                  0.2725432217121124,
+                  0.27255162596702576
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.8,
+                  "auprc_average_precision": 0.5,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.8,
+                  "auprc_average_precision": 0.5,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            }
+          },
+          "l2_norm": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 1.0,
+                "quantiles_05_50_95": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 1.0,
+                "quantiles_05_50_95": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 0.9999999761581421,
+                "quantiles_05_50_95": [
+                  0.9999999403953552,
+                  1.0,
+                  1.0
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.7,
+                  "auprc_average_precision": 0.25,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.7,
+                  "auprc_average_precision": 0.25,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            }
+          },
+          "masked_error": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 0.14556021243333817,
+                "quantiles_05_50_95": [
+                  0.14340362921357155,
+                  0.14556021243333817,
+                  0.14771679565310478
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 0.17484120279550552,
+                "quantiles_05_50_95": [
+                  0.1395461954176426,
+                  0.17484120279550552,
+                  0.21013621017336845
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 0.17733101174235344,
+                "quantiles_05_50_95": [
+                  0.10705471597611904,
+                  0.19078714400529861,
+                  0.2190411776304245
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.25,
+                  "auprc_average_precision": 0.1625,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.35,
+                  "auprc_average_precision": 0.19090909090909092,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              },
+              "lower": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.75,
+                  "auprc_average_precision": 0.3666666666666667,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.65,
+                  "auprc_average_precision": 0.375,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            },
+            "direction_status": "Both directions are post-hoc offline diagnostics; no direction selected or calibrated"
+          },
+          "pre_norm": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 2.0575473308563232,
+                "quantiles_05_50_95": [
+                  2.0575473308563232,
+                  2.0575473308563232,
+                  2.0575473308563232
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 2.167224168777466,
+                "quantiles_05_50_95": [
+                  2.167224168777466,
+                  2.167224168777466,
+                  2.167224168777466
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 1.9102117776870728,
+                "quantiles_05_50_95": [
+                  1.3917627334594727,
+                  1.937936782836914,
+                  2.170827865600586
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.6,
+                  "auprc_average_precision": 0.3333333333333333,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.8,
+                  "auprc_average_precision": 0.5,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            }
+          },
+          "raw_norm": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 2.8283629417419434,
+                "quantiles_05_50_95": [
+                  2.8283629417419434,
+                  2.8283629417419434,
+                  2.8283629417419434
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 2.828390598297119,
+                "quantiles_05_50_95": [
+                  2.828390598297119,
+                  2.828390598297119,
+                  2.828390598297119
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 2.828389024734497,
+                "quantiles_05_50_95": [
+                  2.828362226486206,
+                  2.8283956050872803,
+                  2.828397274017334
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.19999999999999996,
+                  "auprc_average_precision": 0.2,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.19999999999999996,
+                  "auprc_average_precision": 0.2,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            }
+          }
+        }
+      },
+      "selected": {
+        "counts": {
+          "known": 2,
+          "unknown": 2,
+          "background": 10
+        },
+        "scores": {
+          "classifier_unknown": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 0.7006493806838989,
+                "quantiles_05_50_95": [
+                  0.7006493806838989,
+                  0.7006493806838989,
+                  0.7006493806838989
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 0.6946473717689514,
+                "quantiles_05_50_95": [
+                  0.6946473717689514,
+                  0.6946473717689514,
+                  0.6946473717689514
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 0.6443912506103515,
+                "quantiles_05_50_95": [
+                  0.5326096415519714,
+                  0.666526198387146,
+                  0.6840052008628845
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 1.0,
+                  "auprc_average_precision": 1.0,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 1.0,
+                  "auprc_average_precision": 1.0,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            }
+          },
+          "full_error": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 0.16374757885932922,
+                "quantiles_05_50_95": [
+                  0.16339328587055207,
+                  0.16374757885932922,
+                  0.16410187184810637
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 0.18671397119760513,
+                "quantiles_05_50_95": [
+                  0.18659282252192497,
+                  0.18671397119760513,
+                  0.1868351198732853
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 0.19421148300170898,
+                "quantiles_05_50_95": [
+                  0.14478226006031036,
+                  0.19943500310182571,
+                  0.21603132411837578
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.19999999999999996,
+                  "auprc_average_precision": 0.15555555555555556,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.19999999999999996,
+                  "auprc_average_precision": 0.15555555555555556,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              },
+              "lower": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.8,
+                  "auprc_average_precision": 0.41666666666666663,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.8,
+                  "auprc_average_precision": 0.41666666666666663,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            },
+            "direction_status": "Both directions are post-hoc offline diagnostics; no direction selected or calibrated"
+          },
+          "gaussian_objectness": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 0.27255138754844666,
+                "quantiles_05_50_95": [
+                  0.27255138754844666,
+                  0.27255138754844666,
+                  0.27255138754844666
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 0.2725445032119751,
+                "quantiles_05_50_95": [
+                  0.2725445032119751,
+                  0.2725445032119751,
+                  0.2725445032119751
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 0.27254490852355956,
+                "quantiles_05_50_95": [
+                  0.2725428640842438,
+                  0.2725432217121124,
+                  0.27255162596702576
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.8,
+                  "auprc_average_precision": 0.5,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.8,
+                  "auprc_average_precision": 0.5,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            }
+          },
+          "l2_norm": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 1.0,
+                "quantiles_05_50_95": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 1.0,
+                "quantiles_05_50_95": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 0.9999999761581421,
+                "quantiles_05_50_95": [
+                  0.9999999403953552,
+                  1.0,
+                  1.0
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.7,
+                  "auprc_average_precision": 0.25,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.7,
+                  "auprc_average_precision": 0.25,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            }
+          },
+          "masked_error": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 0.14556021243333817,
+                "quantiles_05_50_95": [
+                  0.14340362921357155,
+                  0.14556021243333817,
+                  0.14771679565310478
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 0.17484120279550552,
+                "quantiles_05_50_95": [
+                  0.1395461954176426,
+                  0.17484120279550552,
+                  0.21013621017336845
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 0.17733101174235344,
+                "quantiles_05_50_95": [
+                  0.10705471597611904,
+                  0.19078714400529861,
+                  0.2190411776304245
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.25,
+                  "auprc_average_precision": 0.1625,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.35,
+                  "auprc_average_precision": 0.19090909090909092,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              },
+              "lower": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.75,
+                  "auprc_average_precision": 0.3666666666666667,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.65,
+                  "auprc_average_precision": 0.375,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            },
+            "direction_status": "Both directions are post-hoc offline diagnostics; no direction selected or calibrated"
+          },
+          "pre_norm": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 2.0575473308563232,
+                "quantiles_05_50_95": [
+                  2.0575473308563232,
+                  2.0575473308563232,
+                  2.0575473308563232
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 2.167224168777466,
+                "quantiles_05_50_95": [
+                  2.167224168777466,
+                  2.167224168777466,
+                  2.167224168777466
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 1.9102117776870728,
+                "quantiles_05_50_95": [
+                  1.3917627334594727,
+                  1.937936782836914,
+                  2.170827865600586
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.6,
+                  "auprc_average_precision": 0.3333333333333333,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.8,
+                  "auprc_average_precision": 0.5,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            }
+          },
+          "raw_norm": {
+            "distribution": {
+              "known": {
+                "count": 2,
+                "mean": 2.8283629417419434,
+                "quantiles_05_50_95": [
+                  2.8283629417419434,
+                  2.8283629417419434,
+                  2.8283629417419434
+                ]
+              },
+              "unknown": {
+                "count": 2,
+                "mean": 2.828390598297119,
+                "quantiles_05_50_95": [
+                  2.828390598297119,
+                  2.828390598297119,
+                  2.828390598297119
+                ]
+              },
+              "background": {
+                "count": 10,
+                "mean": 2.828389024734497,
+                "quantiles_05_50_95": [
+                  2.828362226486206,
+                  2.8283956050872803,
+                  2.828397274017334
+                ]
+              }
+            },
+            "directions": {
+              "higher": {
+                "known_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.19999999999999996,
+                  "auprc_average_precision": 0.2,
+                  "positive_prevalence": 0.16666666666666666
+                },
+                "unknown_vs_background": {
+                  "positive_count": 2,
+                  "negative_count": 10,
+                  "auroc": 0.19999999999999996,
+                  "auprc_average_precision": 0.2,
+                  "positive_prevalence": 0.16666666666666666
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "unknown_cases": {
+    "6": {
+      "unknown_gt": 6,
+      "coverage_03": 2,
+      "coverage_05": 2,
+      "coverage_07": 2,
+      "candidate_but_final_unknown_missed": 0,
+      "candidate_all_gaussian_below_fixed_threshold": 2,
+      "candidate_all_classifier_unknown_below_fixed_threshold": 0
+    }
+  },
+  "correlations": {
+    "6_all": {
+      "gaussian_objectness": {
+        "pearson": -0.9089998360938787,
+        "spearman": -0.7087699119383342
+      },
+      "classifier_unknown": {
+        "pearson": 0.5550000537046581,
+        "spearman": -0.24806946917841696
+      }
+    },
+    "6_selected": {
+      "gaussian_objectness": {
+        "pearson": -0.9089998360938787,
+        "spearman": -0.7087699119383342
+      },
+      "classifier_unknown": {
+        "pearson": 0.5550000537046581,
+        "spearman": -0.24806946917841696
+      }
+    }
+  },
+  "fixed_topk_background_counts": {
+    "L6_all_higher_top10": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_all_higher_top50": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_all_higher_top100": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_all_lower_top10": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_all_lower_top50": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_all_lower_top100": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_selected_higher_top10": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_selected_higher_top50": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_selected_higher_top100": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_selected_lower_top10": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_selected_lower_top50": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    },
+    "L6_selected_lower_top100": {
+      "images": 2,
+      "effective_k": 14,
+      "gaussian_background_count": 10,
+      "error_background_count": 10,
+      "error_ambiguous_count": 0
+    }
+  },
+  "error_direction_policy": "Both signs are post-hoc diagnostics; no best direction chosen; no unknown GT training/calibration",
+  "coverage_policy": "Unique-image independent GT geometric coverage, not official one-to-one U-Recall",
+  "low_score_threshold": 0.5,
+  "low_score_causality": "Gaussian score is not multiplied during OWOBJ inference; low-score candidates do not prove filtering cause",
+  "annotation_limit": "Background is relative to all available 80-class annotations; unannotated/out-of-taxonomy objects may exist",
+  "layer_error_policy": "Compare within-layer AUROC/AP, never rank layers by uncalibrated raw MSE",
+  "checkpoint_training_config": {
+    "task": 1,
+    "data_root": "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/cpu_demo/synthetic_dataset",
+    "train_split": "owod_t1_train",
+    "eval_split": "owod_all_task_test",
+    "baseline_checkpoint": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/checkpoints/task1/checkpoint0040.pth",
+    "b0_status": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/reports/train_status.json",
+    "b0_analysis_summary": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/query_analysis/final/summary.json",
+    "b0_pipeline_pid": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/pipeline.pid",
+    "b0_pipeline_log": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/logs/pipeline.log",
+    "resize": {
+      "short_side": 800,
+      "max_size": 1333
+    },
+    "name": "R1",
+    "representation": "l2",
+    "layer": 6,
+    "mask_ratio": 0.6,
+    "autoencoder": {
+      "hidden": 8,
+      "bottleneck": 3
+    },
+    "optimizer": {
+      "lr": 0.0001,
+      "weight_decay": 0.0001
+    },
+    "steps": 1,
+    "batch_size": 1,
+    "extract_batch_size": 1,
+    "seed": 91,
+    "max_cache_gib": 12,
+    "output": "/root/autodl-tmp/experiments/R1/L1",
+    "evaluation": {
+      "positive_iou": 0.5,
+      "background_iou": 0.1,
+      "low_objectness_threshold": 0.5,
+      "repeats": 4,
+      "background_rule": "disjoint_gt"
+    },
+    "synthetic": true
+  },
+  "evaluation_config": {
+    "task": 1,
+    "data_root": "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/cpu_demo/synthetic_dataset",
+    "train_split": "owod_t1_train",
+    "eval_split": "owod_all_task_test",
+    "baseline_checkpoint": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/checkpoints/task1/checkpoint0040.pth",
+    "b0_status": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/reports/train_status.json",
+    "b0_analysis_summary": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/query_analysis/final/summary.json",
+    "b0_pipeline_pid": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/pipeline.pid",
+    "b0_pipeline_log": "/root/autodl-tmp/experiments/B0_PROB_OWOBJ/logs/pipeline.log",
+    "resize": {
+      "short_side": 800,
+      "max_size": 1333
+    },
+    "name": "R1-iou-only",
+    "representation": "l2",
+    "layer": 6,
+    "mask_ratio": 0.6,
+    "autoencoder": {
+      "hidden": 8,
+      "bottleneck": 3
+    },
+    "optimizer": {
+      "lr": 0.0001,
+      "weight_decay": 0.0001
+    },
+    "steps": 1,
+    "batch_size": 1,
+    "extract_batch_size": 1,
+    "seed": 91,
+    "max_cache_gib": 12,
+    "output": "/root/autodl-tmp/experiments/R1/L1_iou_only",
+    "evaluation": {
+      "positive_iou": 0.5,
+      "background_iou": 0.1,
+      "low_objectness_threshold": 0.5,
+      "repeats": 4,
+      "background_rule": "iou_only"
+    },
+    "synthetic": true
+  },
+  "cache_provenance": {
+    "baseline": {
+      "sha256": "synthetic-not-B0"
+    },
+    "split": "evaluation",
+    "split_file": "owod_all_task_test",
+    "split_sha256": "c3f9c8c283a2b1f2f1896f27a01cbe3cddc0c9d93f752e4639035a0f5b36f6e8",
+    "image_ids": [
+      "one",
+      "two"
+    ],
+    "synthetic": true,
+    "extraction_config": {
+      "data_root": "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/cpu_demo/synthetic_dataset",
+      "resize": {
+        "short_side": 800,
+        "max_size": 1333
+      },
+      "batch_size": 1,
+      "train_batch_size": 1,
+      "seed": 91,
+      "all_layers": false,
+      "normalization": {
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ]
+      },
+      "padding": "nested_tensor_from_tensor_list; zeros; max resized H/W in batch",
+      "source_sha256": {
+        "r1/features.py": "8055d3078736176ea38ae9d962358d34354926671bab3c8bc555035c0d695eb2",
+        "models/prob_deformable_sketch_detr.py": "a25f8105931f7cac71eeb9c14fdea36bcbf39a06c03128025032424fac1491d0",
+        "models/deformable_transformer.py": "6c8a541e6274a32d3c37b2a1be32cc07b972e0dd9eff64a389c1610d8fae040a",
+        "models/backbone.py": "a364e5cde1522231c13015f53ea945ef3c451177d3e2109fc701d8225aa4eb23",
+        "r0/data.py": "d365d0b08b6e3e2abfa0a8eef00495fb96a86ba5022ea1efb283dcf5f184d8d0",
+        "r0/runtime.py": "44a24cb0e75720a724a3caa9578bbedd2768e3c94959335ae80e543130edf2ce",
+        "datasets/transforms.py": "39cffb6e84c84f24db99a4a1e466f3fdf1241a8a158dd2fa6e56e895197cee84",
+        "util/misc.py": "5a445be9b426beccc8b41b56a83211eb207eb28ecb4903c3ec4d32a0e3a009cf"
+      }
+    },
+    "all_layers": false,
+    "decoder_layer_count": 6,
+    "layer_ids": [
+      1,
+      3,
+      6
+    ],
+    "schema": "r1-query-v1",
+    "complete": true,
+    "images": 2,
+    "bytes": 32346
+  },
+  "reconstruction_config": {
+    "representation": "l2",
+    "mask_ratio": 0.6,
+    "autoencoder": {
+      "hidden": 8,
+      "bottleneck": 3
+    },
+    "steps": 1
+  },
+  "baseline": {
+    "sha256": "synthetic-not-B0"
+  },
+  "trained_layer": 6
+}

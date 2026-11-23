@@ -1,0 +1,66 @@
+{
+  "scope": "real_annotation_geometry_only; no detector queries or reconstruction scores",
+  "images": 9119,
+  "split_file": "/root/autodl-tmp/datasets/OWOD_B0/ImageSets/TOWOD/owod_all_task_test.txt",
+  "split_sha256": "d6c200f7466b95a2753a217275e1e7ca0a104a766ac61a29a7e993600f29bbef",
+  "positive_iou": 0.5,
+  "legacy_background_iou": 0.1,
+  "candidate_seed": 73,
+  "proposals_per_image": 64,
+  "proposal_grouping": {
+    "before_iou_only": {
+      "known": 3307,
+      "unknown": 1566,
+      "background": 372966,
+      "ambiguous": 205777,
+      "invalid": 0
+    },
+    "after_disjoint_gt": {
+      "known": 3307,
+      "unknown": 1566,
+      "background": 137507,
+      "ambiguous": 441236,
+      "invalid": 0
+    },
+    "delta": {
+      "known": 0,
+      "unknown": 0,
+      "background": -235459,
+      "ambiguous": 235459,
+      "invalid": 0
+    },
+    "transitions": {
+      "background->ambiguous": 235459,
+      "ambiguous->ambiguous": 205777,
+      "known->known": 3307,
+      "background->background": 137507,
+      "unknown->unknown": 1566
+    }
+  },
+  "gt_reference": {
+    "before_iou_only": {
+      "known": 29300,
+      "unknown": 15831,
+      "background": 372966,
+      "ambiguous": 2944,
+      "invalid": 0
+    },
+    "after_disjoint_gt": {
+      "known": 29300,
+      "unknown": 15831,
+      "background": 137507,
+      "ambiguous": 2944,
+      "invalid": 0
+    },
+    "delta": {
+      "known": 0,
+      "unknown": 0,
+      "background": -235459,
+      "ambiguous": 0,
+      "invalid": 0
+    }
+  },
+  "query_counts": "pending final B0; must audit R0 queries and every R1 saved layer on actual extraction",
+  "zero_intersection_assertion": true,
+  "cuda_initialized": false
+}

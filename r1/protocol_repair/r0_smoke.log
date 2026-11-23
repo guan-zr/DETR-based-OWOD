@@ -1,0 +1,33 @@
+test_actual_configured_256_channel_capacity (r0.tests.test_cpu.CPUSmoke) ... ok
+test_all_invalid_regions_report_empty_metrics (r0.tests.test_cpu.CPUSmoke) ... ok
+test_candidate_labels_match_clipped_roi_without_mutating_predictions (r0.tests.test_cpu.CPUSmoke) ... ok
+test_hook_predictions_freezing_and_backward_both_sources (r0.tests.test_cpu.CPUSmoke) ... ok
+test_image_only_training_dataset_never_reads_annotations (r0.tests.test_cpu.CPUSmoke) ... ok
+test_mask_reproducibility_ratio_padding_and_no_mask (r0.tests.test_cpu.CPUSmoke) ... ok
+test_metrics_ties_perfect_inverse_and_absent_class (r0.tests.test_cpu.CPUSmoke) ... ok
+test_mutually_exclusive_groups_include_difficult_unknown (r0.tests.test_cpu.CPUSmoke) ... ok
+test_official_resize_rounding_is_preserved_without_annotations (r0.tests.test_cpu.CPUSmoke) ... ok
+test_offline_multi_scale_pipeline_and_plots (r0.tests.test_cpu.CPUSmoke) ... ok
+test_roi_constant_ramp_resize_stride_padding_invalid_and_tiny (r0.tests.test_cpu.CPUSmoke) ... ok
+test_roi_odd_padding_uses_nominal_stride (r0.tests.test_cpu.CPUSmoke) ... ok
+test_s1_s2_configs_have_identical_budget_capacity_and_protocol (r0.tests.test_cpu.CPUSmoke) ... ok
+test_sampler_resume_and_b0_guard (r0.tests.test_cpu.CPUSmoke) ... ok
+test_targets_detached_even_for_gradient_enabled_inputs (r0.tests.test_cpu.CPUSmoke) ... ok
+test_unflatten_exact_token_order_and_shape_validation (r0.tests.test_cpu.CPUSmoke) ... ok
+test_empty_gt_empty_candidates_and_malformed_gt (r0.tests.test_protocol_repair.ProtocolRepairTests) ... ok
+test_final_detection_blocked_before_b0_or_detector_access (r0.tests.test_protocol_repair.ProtocolRepairTests) ... ok
+test_gt_reference_and_query_share_background_definition_and_audit (r0.tests.test_protocol_repair.ProtocolRepairTests) ... ok
+test_iou_control_reuses_same_weights_but_cannot_change_training_or_scores (r0.tests.test_protocol_repair.ProtocolRepairTests) ... ok
+test_low_iou_containment_all_gt_and_boundary_contact (r0.tests.test_protocol_repair.ProtocolRepairTests) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 3.224s
+
+OK
+{
+  "passed": true,
+  "tests": 21,
+  "seconds": 6.274049997329712,
+  "cuda_initialized": false,
+  "rows": 120
+}

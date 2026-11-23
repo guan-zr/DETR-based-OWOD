@@ -1,0 +1,537 @@
+{
+  "passed": true,
+  "tests": 21,
+  "seconds": 6.274049997329712,
+  "scope": "CPU synthetic diagnostic only; no real detector CUDA forward or reconstruction training",
+  "cuda_initialized": false,
+  "torch_threads": 1,
+  "feature_shapes_synthetic_8_channels": {
+    "S1": [
+      [
+        1,
+        8,
+        16,
+        24
+      ],
+      [
+        1,
+        8,
+        8,
+        12
+      ],
+      [
+        1,
+        8,
+        4,
+        6
+      ],
+      [
+        1,
+        8,
+        2,
+        3
+      ]
+    ],
+    "S2": [
+      [
+        1,
+        8,
+        16,
+        24
+      ],
+      [
+        1,
+        8,
+        8,
+        12
+      ],
+      [
+        1,
+        8,
+        4,
+        6
+      ],
+      [
+        1,
+        8,
+        2,
+        3
+      ]
+    ]
+  },
+  "real_256_channel_ae_tested": true,
+  "diagnostic_metrics_not_research_results": {
+    "S1_gt_reference": {
+      "overall": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 7
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.7142857142857142,
+          "auprc_average_precision": 0.3333333333333333,
+          "positive_prevalence": 0.125
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.1428571428571429,
+          "auprc_average_precision": 0.14285714285714285,
+          "positive_prevalence": 0.125
+        }
+      },
+      "s0_stride2": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 7
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.7142857142857142,
+          "auprc_average_precision": 0.3333333333333333,
+          "positive_prevalence": 0.125
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.1428571428571429,
+          "auprc_average_precision": 0.14285714285714285,
+          "positive_prevalence": 0.125
+        }
+      },
+      "s1_stride4": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 7
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 1.0,
+          "auprc_average_precision": 1.0,
+          "positive_prevalence": 0.125
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.7142857142857142,
+          "auprc_average_precision": 0.3333333333333333,
+          "positive_prevalence": 0.125
+        }
+      },
+      "s2_stride8": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 7
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.5714285714285714,
+          "auprc_average_precision": 0.25,
+          "positive_prevalence": 0.125
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.4285714285714286,
+          "auprc_average_precision": 0.2,
+          "positive_prevalence": 0.125
+        }
+      },
+      "s3_stride16": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 7
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.4285714285714286,
+          "auprc_average_precision": 0.2,
+          "positive_prevalence": 0.125
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.7142857142857142,
+          "auprc_average_precision": 0.3333333333333333,
+          "positive_prevalence": 0.125
+        }
+      }
+    },
+    "S1_query": {
+      "overall": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 1
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 1.0,
+          "auprc_average_precision": 1.0,
+          "positive_prevalence": 0.5
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        }
+      },
+      "s0_stride2": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 1
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 1.0,
+          "auprc_average_precision": 1.0,
+          "positive_prevalence": 0.5
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        }
+      },
+      "s1_stride4": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 1
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        }
+      },
+      "s2_stride8": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 1
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        }
+      },
+      "s3_stride16": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 1
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 1.0,
+          "auprc_average_precision": 1.0,
+          "positive_prevalence": 0.5
+        }
+      }
+    },
+    "S2_gt_reference": {
+      "overall": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 7
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.125,
+          "positive_prevalence": 0.125
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.2857142857142857,
+          "auprc_average_precision": 0.16666666666666666,
+          "positive_prevalence": 0.125
+        }
+      },
+      "s0_stride2": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 7
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.125,
+          "positive_prevalence": 0.125
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.1428571428571429,
+          "auprc_average_precision": 0.14285714285714285,
+          "positive_prevalence": 0.125
+        }
+      },
+      "s1_stride4": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 7
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.125,
+          "positive_prevalence": 0.125
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.5714285714285714,
+          "auprc_average_precision": 0.25,
+          "positive_prevalence": 0.125
+        }
+      },
+      "s2_stride8": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 7
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.125,
+          "positive_prevalence": 0.125
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.5714285714285714,
+          "auprc_average_precision": 0.25,
+          "positive_prevalence": 0.125
+        }
+      },
+      "s3_stride16": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 7
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.125,
+          "positive_prevalence": 0.125
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 7,
+          "auroc": 1.0,
+          "auprc_average_precision": 1.0,
+          "positive_prevalence": 0.125
+        }
+      }
+    },
+    "S2_query": {
+      "overall": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 1
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 1.0,
+          "auprc_average_precision": 1.0,
+          "positive_prevalence": 0.5
+        }
+      },
+      "s0_stride2": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 1
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        }
+      },
+      "s1_stride4": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 1
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 1.0,
+          "auprc_average_precision": 1.0,
+          "positive_prevalence": 0.5
+        }
+      },
+      "s2_stride8": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 1
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 0.0,
+          "auprc_average_precision": 0.5,
+          "positive_prevalence": 0.5
+        }
+      },
+      "s3_stride16": {
+        "counts": {
+          "known": 1,
+          "unknown": 1,
+          "background": 1
+        },
+        "excluded_count": 0,
+        "known_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 1.0,
+          "auprc_average_precision": 1.0,
+          "positive_prevalence": 0.5
+        },
+        "unknown_vs_background": {
+          "positive_count": 1,
+          "negative_count": 1,
+          "auroc": 1.0,
+          "auprc_average_precision": 1.0,
+          "positive_prevalence": 0.5
+        }
+      }
+    }
+  },
+  "figures": [
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S1_gt_reference_overall.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S1_gt_reference_s0_stride2.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S1_gt_reference_s1_stride4.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S1_gt_reference_s2_stride8.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S1_gt_reference_s3_stride16.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S1_query_overall.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S1_query_s0_stride2.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S1_query_s1_stride4.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S1_query_s2_stride8.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S1_query_s3_stride16.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S2_gt_reference_overall.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S2_gt_reference_s0_stride2.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S2_gt_reference_s1_stride4.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S2_gt_reference_s2_stride8.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S2_gt_reference_s3_stride16.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S2_query_overall.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S2_query_s0_stride2.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S2_query_s1_stride4.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S2_query_s2_stride8.png",
+    "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/r0_smoke/figures/S2_query_s3_stride16.png"
+  ],
+  "rows": 120,
+  "torch": "2.1.2+cu118"
+}

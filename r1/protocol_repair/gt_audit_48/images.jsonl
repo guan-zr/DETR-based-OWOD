@@ -1,0 +1,48 @@
+{"image_id": "000001", "gt_reference_before": {"known": 2, "background": 41}, "gt_reference_after": {"known": 2}}
+{"image_id": "000386", "gt_reference_before": {"known": 3, "background": 39}, "gt_reference_after": {"known": 3, "background": 18}}
+{"image_id": "000757", "gt_reference_before": {"known": 1, "background": 54}, "gt_reference_after": {"known": 1}}
+{"image_id": "001155", "gt_reference_before": {"ambiguous": 2, "known": 1, "background": 37}, "gt_reference_after": {"ambiguous": 2, "known": 1, "background": 15}}
+{"image_id": "001549", "gt_reference_before": {"known": 2, "background": 49}, "gt_reference_after": {"known": 2, "background": 7}}
+{"image_id": "001919", "gt_reference_before": {"known": 1, "background": 52}, "gt_reference_after": {"known": 1, "background": 33}}
+{"image_id": "002317", "gt_reference_before": {"known": 6, "background": 33}, "gt_reference_after": {"known": 6, "background": 1}}
+{"image_id": "002729", "gt_reference_before": {"known": 3, "background": 50}, "gt_reference_after": {"known": 3}}
+{"image_id": "003128", "gt_reference_before": {"known": 1, "background": 55}, "gt_reference_after": {"known": 1, "background": 41}}
+{"image_id": "003523", "gt_reference_before": {"known": 1, "background": 39}, "gt_reference_after": {"known": 1, "background": 26}}
+{"image_id": "003914", "gt_reference_before": {"known": 7, "background": 30}, "gt_reference_after": {"known": 7, "background": 19}}
+{"image_id": "004301", "gt_reference_before": {"known": 2, "background": 40}, "gt_reference_after": {"known": 2, "background": 3}}
+{"image_id": "004670", "gt_reference_before": {"known": 1, "background": 54}, "gt_reference_after": {"known": 1, "background": 49}}
+{"image_id": "005053", "gt_reference_before": {"known": 3, "ambiguous": 1, "background": 45}, "gt_reference_after": {"known": 3, "ambiguous": 1, "background": 31}}
+{"image_id": "005462", "gt_reference_before": {"known": 1, "background": 49}, "gt_reference_after": {"known": 1}}
+{"image_id": "005857", "gt_reference_before": {"known": 2, "background": 39}, "gt_reference_after": {"known": 2, "background": 26}}
+{"image_id": "006256", "gt_reference_before": {"known": 2, "background": 41}, "gt_reference_after": {"known": 2, "background": 4}}
+{"image_id": "006646", "gt_reference_before": {"known": 5, "ambiguous": 1, "background": 33}, "gt_reference_after": {"known": 5, "ambiguous": 1, "background": 20}}
+{"image_id": "007053", "gt_reference_before": {"ambiguous": 1, "known": 7, "background": 14}, "gt_reference_after": {"ambiguous": 1, "known": 7}}
+{"image_id": "007434", "gt_reference_before": {"known": 1, "background": 53}, "gt_reference_after": {"known": 1, "background": 2}}
+{"image_id": "007825", "gt_reference_before": {"known": 1, "background": 45}, "gt_reference_after": {"known": 1, "background": 16}}
+{"image_id": "008205", "gt_reference_before": {"known": 2, "background": 37}, "gt_reference_after": {"known": 2, "background": 12}}
+{"image_id": "008579", "gt_reference_before": {"known": 9, "ambiguous": 1, "background": 34}, "gt_reference_after": {"known": 9, "ambiguous": 1, "background": 21}}
+{"image_id": "008950", "gt_reference_before": {"known": 1, "background": 45}, "gt_reference_after": {"known": 1, "background": 32}}
+{"image_id": "009352", "gt_reference_before": {"known": 2, "background": 41}, "gt_reference_after": {"known": 2, "background": 21}}
+{"image_id": "009765", "gt_reference_before": {"known": 1, "background": 39}, "gt_reference_after": {"known": 1, "background": 14}}
+{"image_id": "000000447169", "gt_reference_before": {"known": 2, "unknown": 2, "background": 57}, "gt_reference_after": {"known": 2, "unknown": 2, "background": 30}}
+{"image_id": "000000343466", "gt_reference_before": {"unknown": 2, "background": 43}, "gt_reference_after": {"unknown": 2, "background": 31}}
+{"image_id": "000000558558", "gt_reference_before": {"known": 1, "unknown": 4, "background": 61}, "gt_reference_after": {"known": 1, "unknown": 4, "background": 41}}
+{"image_id": "000000515025", "gt_reference_before": {"known": 7, "unknown": 3, "background": 23}, "gt_reference_after": {"known": 7, "unknown": 3, "background": 2}}
+{"image_id": "000000041633", "gt_reference_before": {"known": 2, "unknown": 1, "background": 47}, "gt_reference_after": {"known": 2, "unknown": 1, "background": 9}}
+{"image_id": "000000341469", "gt_reference_before": {"known": 3, "unknown": 10, "background": 15}, "gt_reference_after": {"known": 3, "unknown": 10}}
+{"image_id": "000000203639", "gt_reference_before": {"known": 1, "unknown": 1, "background": 50}, "gt_reference_after": {"known": 1, "unknown": 1, "background": 12}}
+{"image_id": "000000567740", "gt_reference_before": {"known": 2, "unknown": 4, "background": 34}, "gt_reference_after": {"known": 2, "unknown": 4, "background": 10}}
+{"image_id": "000000036844", "gt_reference_before": {"known": 11, "unknown": 3, "background": 28}, "gt_reference_after": {"known": 11, "unknown": 3, "background": 9}}
+{"image_id": "000000168883", "gt_reference_before": {"unknown": 2, "known": 4, "background": 28}, "gt_reference_after": {"unknown": 2, "known": 4, "background": 1}}
+{"image_id": "000000451879", "gt_reference_before": {"unknown": 2, "known": 4, "background": 25}, "gt_reference_after": {"unknown": 2, "known": 4, "background": 1}}
+{"image_id": "000000358427", "gt_reference_before": {"unknown": 3, "background": 35}, "gt_reference_after": {"unknown": 3, "background": 4}}
+{"image_id": "000000394510", "gt_reference_before": {"known": 5, "unknown": 1, "background": 29}, "gt_reference_after": {"known": 5, "unknown": 1, "background": 16}}
+{"image_id": "000000245311", "gt_reference_before": {"known": 2, "unknown": 16, "background": 27}, "gt_reference_after": {"known": 2, "unknown": 16, "background": 4}}
+{"image_id": "000000064523", "gt_reference_before": {"known": 12, "unknown": 11, "background": 13}, "gt_reference_after": {"known": 12, "unknown": 11, "background": 5}}
+{"image_id": "000000024144", "gt_reference_before": {"unknown": 1, "background": 51}, "gt_reference_after": {"unknown": 1, "background": 1}}
+{"image_id": "000000563470", "gt_reference_before": {"unknown": 1, "known": 3, "background": 50}, "gt_reference_after": {"unknown": 1, "known": 3, "background": 34}}
+{"image_id": "000000176606", "gt_reference_before": {"known": 3, "unknown": 1, "background": 36}, "gt_reference_after": {"known": 3, "unknown": 1, "background": 9}}
+{"image_id": "000000225757", "gt_reference_before": {"known": 3, "unknown": 6, "background": 17}, "gt_reference_after": {"known": 3, "unknown": 6, "background": 5}}
+{"image_id": "000000066635", "gt_reference_before": {"known": 1, "unknown": 3, "background": 37}, "gt_reference_after": {"known": 1, "unknown": 3, "background": 11}}
+{"image_id": "000000499266", "gt_reference_before": {"unknown": 1, "known": 4, "background": 32}, "gt_reference_after": {"unknown": 1, "known": 4, "background": 1}}
+{"image_id": "000000031749", "gt_reference_before": {"unknown": 1, "background": 52}, "gt_reference_after": {"unknown": 1, "background": 36}}

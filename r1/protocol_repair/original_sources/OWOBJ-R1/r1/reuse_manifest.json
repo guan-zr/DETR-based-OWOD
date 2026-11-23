@@ -1,0 +1,12 @@
+{
+  "root": "/root/autodl-tmp/projects/OWOBJ-R0",
+  "files": {
+    "r0/runtime.py": "2b1bff2a4dd917b90b75c0dd2f7014c6510ebac935273e390c2bcd24e2b96c6d",
+    "r0/data.py": "d365d0b08b6e3e2abfa0a8eef00495fb96a86ba5022ea1efb283dcf5f184d8d0",
+    "r0/labels.py": "b1ff0627e6b8ba396ea38bd2d53728bca41874c77a6a45ed3c330e52447068df",
+    "r0/metrics.py": "1e6725d18f5b3d17fc933749093eb6d4d3c209342fb78675866eaf1a736da0de",
+    "r0/types.py": "083c25e72693b0a6aa01ca0d8d78f34487c44ef5e00925d7cc08735138685000",
+    "r0/features.py": "e635618c735648cde1d2d838e2ab0b22cea7edb170c65bf5d4adf7d859577db1",
+    "r0/configs/mowodb_task1_classes.json": "397516c76aecfeb3d7f69be937ec0b7a7d6955b519066e4d81739914ecff5894"
+  }
+}

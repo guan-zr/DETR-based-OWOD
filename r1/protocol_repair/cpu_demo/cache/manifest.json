@@ -1,0 +1,58 @@
+{
+  "baseline": {
+    "sha256": "synthetic-not-B0"
+  },
+  "split": "evaluation",
+  "split_file": "owod_all_task_test",
+  "split_sha256": "c3f9c8c283a2b1f2f1896f27a01cbe3cddc0c9d93f752e4639035a0f5b36f6e8",
+  "image_ids": [
+    "one",
+    "two"
+  ],
+  "synthetic": true,
+  "extraction_config": {
+    "data_root": "/root/autodl-tmp/projects/OWOBJ-R1/r1/protocol_repair/cpu_demo/synthetic_dataset",
+    "resize": {
+      "short_side": 800,
+      "max_size": 1333
+    },
+    "batch_size": 1,
+    "train_batch_size": 1,
+    "seed": 91,
+    "all_layers": false,
+    "normalization": {
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "padding": "nested_tensor_from_tensor_list; zeros; max resized H/W in batch",
+    "source_sha256": {
+      "r1/features.py": "8055d3078736176ea38ae9d962358d34354926671bab3c8bc555035c0d695eb2",
+      "models/prob_deformable_sketch_detr.py": "a25f8105931f7cac71eeb9c14fdea36bcbf39a06c03128025032424fac1491d0",
+      "models/deformable_transformer.py": "6c8a541e6274a32d3c37b2a1be32cc07b972e0dd9eff64a389c1610d8fae040a",
+      "models/backbone.py": "a364e5cde1522231c13015f53ea945ef3c451177d3e2109fc701d8225aa4eb23",
+      "r0/data.py": "d365d0b08b6e3e2abfa0a8eef00495fb96a86ba5022ea1efb283dcf5f184d8d0",
+      "r0/runtime.py": "44a24cb0e75720a724a3caa9578bbedd2768e3c94959335ae80e543130edf2ce",
+      "datasets/transforms.py": "39cffb6e84c84f24db99a4a1e466f3fdf1241a8a158dd2fa6e56e895197cee84",
+      "util/misc.py": "5a445be9b426beccc8b41b56a83211eb207eb28ecb4903c3ec4d32a0e3a009cf"
+    }
+  },
+  "all_layers": false,
+  "decoder_layer_count": 6,
+  "layer_ids": [
+    1,
+    3,
+    6
+  ],
+  "schema": "r1-query-v1",
+  "complete": true,
+  "images": 2,
+  "bytes": 32346
+}

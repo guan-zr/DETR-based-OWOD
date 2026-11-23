@@ -1,0 +1,60 @@
+{
+  "L3_all": {
+    "before_iou_only": {
+      "known": 2,
+      "unknown": 2,
+      "background": 8,
+      "ambiguous": 2,
+      "invalid": 0
+    },
+    "after_disjoint_gt": {
+      "known": 2,
+      "unknown": 2,
+      "background": 8,
+      "ambiguous": 2,
+      "invalid": 0
+    },
+    "delta": {
+      "known": 0,
+      "unknown": 0,
+      "background": 0,
+      "ambiguous": 0,
+      "invalid": 0
+    },
+    "transitions": {
+      "known->known": 2,
+      "unknown->unknown": 2,
+      "ambiguous->ambiguous": 2,
+      "background->background": 8
+    }
+  },
+  "L3_selected": {
+    "before_iou_only": {
+      "known": 2,
+      "unknown": 2,
+      "background": 8,
+      "ambiguous": 2,
+      "invalid": 0
+    },
+    "after_disjoint_gt": {
+      "known": 2,
+      "unknown": 2,
+      "background": 8,
+      "ambiguous": 2,
+      "invalid": 0
+    },
+    "delta": {
+      "known": 0,
+      "unknown": 0,
+      "background": 0,
+      "ambiguous": 0,
+      "invalid": 0
+    },
+    "transitions": {
+      "known->known": 2,
+      "unknown->unknown": 2,
+      "ambiguous->ambiguous": 2,
+      "background->background": 8
+    }
+  }
+}
