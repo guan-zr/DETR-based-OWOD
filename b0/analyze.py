@@ -17,8 +17,9 @@ import torch
 from torch.utils.data import DataLoader
 
 from b0.common import (ARTIFACTS, build, clone_outputs, datasets, json_write,
-                       load_checkpoint, model_args, seed_all, to_device)
+                       load_checkpoint, model_args, to_device)
 from b0.features import FeatureCapture
+from b0.eval_parity import seed_official_evaluation,TraceComparator,backend_profile,file_sha256
 from b0.metrics import iou, official_unknown_hits, query_groups, miss_score_summary
 from b0.prepare_data import ALIASES
 from b0.smoke import equal, subset
@@ -75,8 +76,8 @@ def plots(summary,records,groups,out):
     fig.tight_layout();fig.savefig(out/'coverage_vs_final_recall.png',dpi=180);plt.close(fig)
 
 
-def run(checkpoint,config=None,smoke_limit=0,output=None):
-    args=model_args(config);seed_all(args.seed)
+def run(checkpoint,config=None,smoke_limit=0,output=None,reference_trace=None,indices_json=None):
+    args=model_args(config);seed_official_evaluation(args.seed)
     model,criterion,postprocessors,_=build(args)
     saved=load_checkpoint(model,checkpoint)
     if not smoke_limit:
@@ -86,13 +87,20 @@ def run(checkpoint,config=None,smoke_limit=0,output=None):
                 'training_git_commit':saved.get('git_commit')}
     del saved
     _,dataset=datasets(args)
-    if smoke_limit:
+    if indices_json:
+        assert smoke_limit, 'Explicit index subsets require smoke mode'
+        dataset=subset(dataset,json.loads(Path(indices_json).read_text()))
+    elif smoke_limit:
         # Deliberately include annotated COCO unknowns, not only first VOC images.
         indices=[i for i,stem in enumerate(dataset.image_set) if len(stem)==6][:smoke_limit//2]
         indices += [i for i,stem in enumerate(dataset.image_set) if len(stem)==12][:smoke_limit-len(indices)]
         dataset=subset(dataset,indices)
     out=Path(output) if output else ARTIFACTS/('query_analysis/smoke' if smoke_limit else 'query_analysis/final')
+    if out.exists() and any(out.iterdir()):raise RuntimeError('Refuse to overwrite existing Query analysis')
     out.mkdir(parents=True,exist_ok=True)
+    if not smoke_limit and not reference_trace:
+        raise RuntimeError('Full analysis requires --reference-trace from the official entrypoint')
+    comparator=TraceComparator(reference_trace,args,dataset,checkpoint,out) if reference_trace else None
     loader=DataLoader(dataset,batch_size=args.eval_batch_size,shuffle=False,collate_fn=collate_fn,
                       num_workers=args.num_workers,pin_memory=True)
     evaluator=OWEvaluator(dataset,('bbox',),args=args)
@@ -115,7 +123,9 @@ def run(checkpoint,config=None,smoke_limit=0,output=None):
             # Clone inputs so analysis preserves every original query logit.
             results=postprocessors['bbox'](clone_outputs(outputs),sizes)
             res={target['image_id'].item():result for target,result in zip(targets,results)}
+            line_start=len(evaluator.lines)
             evaluator.update(res)
+            if comparator is not None:comparator.compare(samples,outputs,res,evaluator,line_start)
             normalized_boxes=box_cxcywh_to_xyxy(outputs['pred_boxes'])
             masked=outputs['pred_logits'].clone();masked[:,:,postprocessors['bbox'].invalid_cls_logits]=-10e10
             selected=masked.sigmoid().flatten(1).topk(100,dim=1).indices
@@ -215,8 +225,13 @@ def run(checkpoint,config=None,smoke_limit=0,output=None):
             distributions[name][score]={'count':len(array),'mean':float(array.mean()) if len(array) else None,
                 'quantiles_05_25_50_75_95':np.quantile(array,[.05,.25,.5,.75,.95]).tolist() if len(array) else []}
     summary['objectness_distributions']=distributions
+    summary['evaluation_backend']=backend_profile()
+    split=Path(args.data_root)/'ImageSets'/args.dataset/(args.test_set+'.txt')
+    summary['split_provenance']={'path':str(split),'sha256':file_sha256(split)}
+    if comparator is not None:summary['official_detection_parity']=comparator.close(official)
     if not smoke_limit:
         original=ARTIFACTS/'evaluations/final/official_metrics.json'
+        if not original.exists():raise RuntimeError('Original official metrics missing; cannot certify parity')
         if original.exists():
             reference=json.loads(original.read_text())
             for key in ['K_AP50','U_R50','WI','AOSA']:
@@ -239,5 +254,7 @@ if __name__=='__main__':
     parser.add_argument('--config')
     parser.add_argument('--smoke-limit',type=int,default=0)
     parser.add_argument('--output')
+    parser.add_argument('--reference-trace')
+    parser.add_argument('--indices-json')
     args=parser.parse_args()
-    run(args.checkpoint,args.config,args.smoke_limit,args.output)
+    run(args.checkpoint,args.config,args.smoke_limit,args.output,args.reference_trace,args.indices_json)
